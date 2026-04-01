@@ -20,35 +20,44 @@ public class TurnManager : MonoBehaviour
     public bool   IsPlayerTurn      => currentActor == player;
     public string CurrentActorName  => currentActor.playerName;
     
-    void Start()
+    public void InitBattle(DeckData playerDeck, EncounterData encounter)
     {
+        gameOver = false; 
+        StopAllCoroutines();
+        
+        // 1. Oyuncuyu ve Düşmanı oluştur
         player = new Player("Oyuncu", 30, 3);
-        enemy  = new Player("Düşman",  30, 3);
+        enemy  = new Player(encounter.enemyName, encounter.maxHealth, encounter.maxEnergy);
 
-        // ScriptableObject'ten karıştırılmış deste oluştur
-        player.deck = playerDeckData.BuildShuffledDeck();
-        enemy.deck  = enemyDeckData.BuildShuffledDeck();
+        // 2. Desteleri yükle
+        player.deck = playerDeck.BuildShuffledDeck();
+        enemy.deck  = encounter.enemyDeck.BuildShuffledDeck();
 
-        StartGame();
-    }
-
-    void StartGame()
-    {
-        for (int i = 0; i < 3; i++) player.DrawCard();
-        for (int i = 0; i < 3; i++) enemy.DrawCard();
-
-        currentActor  = player;
+        // 3. UI Manager'ı zorla güncelle ki yeni HP değerlerini alsın
+        FindObjectOfType<UIManager>().hudView.Init(player.health, enemy.health);
+        FindObjectOfType<UIManager>().hudView.ShowLog("Savaş Başladı!");
+        
+        // 4. Savaşı Başlat
+        currentActor = player;
         currentTarget = enemy;
-        BeginTurn();
+        BeginTurn(); 
     }
 
     public void BeginTurn()
     {
         currentActor.shield = 0;
         currentActor.RefillEnergy();
-        currentActor.DrawCard();
+
+        // 1. Önce eldeki kalan kartları temizle (isteğe bağlı çöpe atma mekaniği de eklenebilir)
+        currentActor.hand.Clear();
+
+        // 2. Her turun başında oyuncuya SABİT 4 kart ver
+        for (int i = 0; i < 4; i++) 
+        {
+            currentActor.DrawCard();
+        }
+
         Debug.Log($"=== {currentActor.playerName}'ın turu ===");
-        Debug.Log(currentActor.ToString());
 
         // Düşmanın turu başladıysa AI'ı devreye sok
         if (currentActor == enemy)
@@ -102,6 +111,7 @@ public class TurnManager : MonoBehaviour
         {
             Debug.Log($"🏆 {currentActor.playerName} kazandı!");
             gameOver = true;
+            FindObjectOfType<GameManager>().EndBattle(true);
             return;
         }
 

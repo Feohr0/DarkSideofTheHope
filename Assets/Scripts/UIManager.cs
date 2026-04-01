@@ -10,15 +10,10 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        // HUD başlat
-        hudView.Init(turnManager.player.health,
-            turnManager.enemy.health);
-
-        // "Turu Bitir" butonu
-        hudView.endTurnButton.onClick.AddListener(OnEndTurnClicked);
-
-        // İlk durumu çiz
-        Refresh();
+        if (hudView.endTurnButton != null)
+        {
+            hudView.endTurnButton.onClick.AddListener(OnEndTurnClicked);
+        }
     }
 
     // TurnManager her değişiklikte bunu çağırır
@@ -44,14 +39,18 @@ public class UIManager : MonoBehaviour
 
     private void OnCardClicked(Card card)
     {
+        // 1. Arka planda kartı oyna ve desteden düş
         turnManager.TryPlayCard(card);
-
-        // Kart oynandıktan sonra eli ve HUD'u güncelle
-        hudView.UpdatePlayer(turnManager.player);
-        hudView.UpdateEnemy(turnManager.enemy);
-        handView.RefreshInteractability(turnManager.player.hand,
-            turnManager.player.currentEnergy);
-
+    
+        // 2. YANLIŞ YÖNTEM (Eskisi):
+        // hudView.UpdatePlayer(turnManager.player);
+        // hudView.UpdateEnemy(turnManager.enemy);
+        // handView.RefreshInteractability(turnManager.player.hand, turnManager.player.currentEnergy);
+    
+        // DOĞRU YÖNTEM: Kart elden silindiği için tüm UI'ı ve eli baştan çizdir.
+        Refresh(); 
+    
+        // 3. Log mesajını göster
         hudView.ShowLog($"{card.cardName} oynandı!");
     }
 
