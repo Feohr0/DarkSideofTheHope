@@ -429,78 +429,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261537217}
   m_CullTransparentMesh: 1
---- !u!1 &267436048
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 267436049}
-  - component: {fileID: 267436051}
-  - component: {fileID: 267436050}
-  m_Layer: 5
-  m_Name: 'CardPrefab   '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &267436049
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 267436048}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 374751294}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &267436050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 267436048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0303391c4e8ace46ab0cac4ca9622f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CardView
-  damageColor: {r: 0.85, g: 0.2, b: 0.2, a: 1}
-  shieldColor: {r: 0.2, g: 0.5, b: 0.85, a: 1}
-  healColor: {r: 0.2, g: 0.75, b: 0.3, a: 1}
-  nameText: {fileID: 0}
-  costText: {fileID: 0}
-  powerText: {fileID: 0}
-  effectText: {fileID: 0}
-  flavorText: {fileID: 0}
-  cardArt: {fileID: 0}
-  cardBackground: {fileID: 0}
-  cardButton: {fileID: 0}
---- !u!225 &267436051
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 267436048}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &274834447
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,8 +493,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 267436049}
+  m_Children: []
   m_Father: {fileID: 1127782156}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1770,7 +1697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe8e830bb9ac984eb59e582d091d0e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandView
-  cardPrefab: {fileID: 267436048}
+  cardPrefab: {fileID: 7552095659167363450, guid: 9e3136cb1deba364fbf989439ad0ea8f, type: 3}
   handContainer: {fileID: 374751294}
 --- !u!1 &1182493206
 GameObject:
