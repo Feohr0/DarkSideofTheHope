@@ -13,6 +13,10 @@ public class TurnManager : MonoBehaviour
     
     private bool gameOver = false;
     
+    [Header("Desteler (ScriptableObject)")]
+    public DeckData playerDeckData;
+    public DeckData enemyDeckData;
+    
     public bool   IsPlayerTurn      => currentActor == player;
     public string CurrentActorName  => currentActor.playerName;
     
@@ -21,15 +25,9 @@ public class TurnManager : MonoBehaviour
         player = new Player("Oyuncu", 30, 3);
         enemy  = new Player("Düşman",  30, 3);
 
-        // Kart tanımları
-        player.deck.Add(new Card("Kılıç Darbesi", 1, 3,  Card.EffectType.Damage));
-        player.deck.Add(new Card("Kalkan",         2, 4,  Card.EffectType.Shield));
-        player.deck.Add(new Card("Büyü",           3, 6,  Card.EffectType.Damage));
-        player.deck.Add(new Card("İksir",          2, 5,  Card.EffectType.Heal));
-
-        enemy.deck.Add(new Card("Pençe",  1, 2, Card.EffectType.Damage));
-        enemy.deck.Add(new Card("Zırh",   2, 3, Card.EffectType.Shield));
-        enemy.deck.Add(new Card("Isırma", 1, 2, Card.EffectType.Damage));
+        // ScriptableObject'ten karıştırılmış deste oluştur
+        player.deck = playerDeckData.BuildShuffledDeck();
+        enemy.deck  = enemyDeckData.BuildShuffledDeck();
 
         StartGame();
     }
