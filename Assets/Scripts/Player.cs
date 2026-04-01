@@ -1,55 +1,79 @@
-// Scripts/Entities/Player.cs
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Entity
+public class Player
 {
-    public static Player Instance { get; private set; }
+    public string playerName;
+    public int    health;
+    public int    maxEnergy;   // her turun başında sıfırlanacak maksimum enerji
+    public int    currentEnergy;
 
-    [Header("Energy")]
-    [SerializeField] private int maxEnergy = 3;
-    public int CurrentEnergy { get; private set; }
-
-    [Header("Run Data")]
-    public int Gold { get; private set; }
-    public int Floor { get; private set; }
-
-    private DeckManager _deckManager;
-
-    protected override void Awake()
+    public List<Card> hand  = new List<Card>();   // eldeki kartlar
+    public List<Card> deck  = new List<Card>();   // çekilmemiş deste
+    
+    public int shield = 0; 
+    
+    public Player(string name, int hp, int maxEn)
     {
-        base.Awake();
-        if (Instance != null) { Destroy(gameObject); return; }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-        _deckManager = GetComponent<DeckManager>();
+        playerName = name;
+        health     = hp;
+        maxEnergy  = maxEn;
+        currentEnergy = maxEnergy;
     }
 
-    public void StartCombatTurn()
+    // Tur başında enerjiyi doldur
+    public void RefillEnergy() => currentEnergy = maxEnergy;
+
+    // Desteden kart çek
+    public void DrawCard()
     {
-        ResetBlock();
-        CurrentEnergy = maxEnergy;
-        EventBus.Publish(new EnergyChangedEvent(CurrentEnergy, maxEnergy));
-        ProcessEffectsOnTurnStart();
-        _deckManager.DrawCards(5);
+        if (deck.Count == 0) { Debug.Log("Deste bitti!"); return; }
+
+        Card drawn = deck[0];
+        deck.RemoveAt(0);
+        hand.Add(drawn);
+        Debug.Log($"{playerName} çekti: {drawn}");
     }
 
-    public bool TrySpendEnergy(int cost)
+    // Kart oyna (enerji yeterliyse)
+    public bool PlayCard(Card card)
     {
-        if (CurrentEnergy < cost) return false;
-        CurrentEnergy -= cost;
-        EventBus.Publish(new EnergyChangedEvent(CurrentEnergy, maxEnergy));
+        if (!hand.Contains(card))        { Debug.Log("Kart elde yok.");           return false; }
+        if (currentEnergy < card.energyCost) { Debug.Log("Yetersiz enerji.");     return false; }
+
+        currentEnergy -= card.energyCost;
+        hand.Remove(card);
+        Debug.Log($"{playerName} oynadı: {card}  |  Kalan enerji: {currentEnergy}");
         return true;
     }
 
-    public void GainGold(int amount) => Gold += amount;
-    public void SpendGold(int amount) => Gold = Mathf.Max(0, Gold - amount);
-    public void IncrementFloor() => Floor++;
-
-    private void ResetBlock() => CurrentBlock = 0;
-
-    protected override void OnDeath()
+    // Hasar alırken kalkanı önce tüket
+    public void TakeDamage(int amount)
     {
-        base.OnDeath();
-        GameStateManager.Instance.TransitionTo(GameState.GameOver);
+        int absorbed = Mathf.Min(shield, amount);
+        shield  -= absorbed;
+        amount  -= absorbed;
+        health  -= amount;
+        health   = Mathf.Max(health, 0);   // negatife düşmesin
+
+        Debug.Log($"{playerName} → {absorbed} kalkanla engellendi, " +
+                  $"{amount} hasar aldı | HP:{health}  Kalkan:{shield}");
     }
+
+    public void AddShield(int amount)
+    {
+        shield += amount;
+        Debug.Log($"{playerName} +{amount} kalkan kazandı | Kalkan:{shield}");
+    }
+
+    public void HealHealth(int amount)
+    {
+        health += amount;
+        Debug.Log($"{playerName} +{amount} can kazandı | HP:{health}");
+    }
+    
+    public bool IsAlive => health > 0;
+
+    public override string ToString()
+        => $"{playerName} — HP:{health}  Enerji:{currentEnergy}/{maxEnergy}  Elde:{hand.Count} kart";
 }
