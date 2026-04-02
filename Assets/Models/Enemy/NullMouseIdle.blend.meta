@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 04a8a53f4df5c254a9981dad98995b7e
+guid: 926e887be2e51644bb702187c22b3caa
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -8,17 +8,27 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: body
-    second: {fileID: 2100000, guid: 31dd3bd74af533645828a8b8a5d23808, type: 2}
+    second: {fileID: 2100000, guid: 907cdbf88787cfb41b6280d69b3f70e0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: eye
-    second: {fileID: 2100000, guid: fe73cf2718e84be459e8337a44e91438, type: 2}
+      name: body parts
+    second: {fileID: 2100000, guid: 211403578626d9e42a25c0480de7f5a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye and nose
+    second: {fileID: 2100000, guid: edc9f9f395afed346949b6df24af1e34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mouth
+    second: {fileID: 2100000, guid: 1dedbbd2035803246aade9bc550c4b3a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: wound
-    second: {fileID: 2100000, guid: 211fb905877e00a489f8060adfcd5351, type: 2}
+    second: {fileID: 2100000, guid: f950f20ff06c0624ea01d19fc2ec22d6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -44,36 +54,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Scene
-      takeName: Scene
-      internalID: -623603649343465320
-      firstFrame: 0
-      lastFrame: 73
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class GameManager : MonoBehaviour
     [Header("Ekonomi")]
     public int playerGold = 0;
 
+    public List<Card> playerCurrentDeck = new List<Card>();
+    
     public void AddGold(int amount)
     {
         playerGold += amount;
@@ -41,6 +44,13 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         playerCurrentHP = playerMaxHP;
+        
+        // Oyun ilk başladığında temel destedeki kartları (CardData), güncel destemize (Card) çevirip ekliyoruz
+        foreach (CardData cardData in playerMainDeck.cards)
+        {
+            playerCurrentDeck.Add(cardData.ToCard());
+        }
+        
         // Oyun başladığında Haritayı aç, Savaşı gizle
         ShowMap();
     }
@@ -72,6 +82,19 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Öldün! Oyun baştan başlıyor...");
             playerCurrentHP = playerMaxHP; // Test için resetleyebilirsin
+        }
+    }
+    
+    public void UpgradeCardType(CardData cardType, int cost)
+    {
+        if (playerGold >= cost && cardType.currentLevel < 3)
+        {
+            playerGold -= cost;
+            cardType.Upgrade();
+        
+            // UI'ı güncellemek için Refresh çağırılabilir
+            FindObjectOfType<UIManager>()?.Refresh();
+            Debug.Log($"{cardType.cardName} türü Seviye {cardType.currentLevel}'e yükseltildi!");
         }
     }
 }

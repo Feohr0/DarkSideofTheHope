@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 [System.Serializable]
@@ -6,24 +5,29 @@ public class Card
 {
     public enum EffectType { Damage, Shield, Heal }
 
-    public string     cardName;
-    public int        energyCost;
-    public int        power;
-    public EffectType effect;
-    public Sprite     art;          // CardData'dan taşınan görsel
-    public string     flavorText;
+    // Kartın temel verilerini tutan referans (ScriptableObject)
+    public CardData data;
 
-    public Card(string name, int cost, int power,
-        EffectType effect, Sprite art = null, string flavor = "")
+    // Kurucu Metot (Constructor): Runtime'da desteye kart eklenirken çalışır
+    public Card(CardData data)
     {
-        this.cardName   = name;
-        this.energyCost = cost;
-        this.power      = power;
-        this.effect     = effect;
-        this.art        = art;
-        this.flavorText = flavor;
+        this.data = data;
     }
 
-    public override string ToString()
-        => $"[{cardName}] Cost:{energyCost} {effect}:{power}";
+    // --- Dinamik Özellikler (Veriyi her an CardData'dan çeker) ---
+
+    // İsim: Eğer kartın türü geliştirilmişse (seviyesi > 0), ismin yanına +1, +2 yazar
+    public string cardName => data.cardName + (data.currentLevel > 0 ? $" +{data.currentLevel}" : "");
+
+    // Maliyet ve Güç: O anki seviyeye göre doğrudan CardData'dan hesaplanıp gelir
+    public int energyCost => data.GetCurrentCost();
+    public int power      => data.GetCurrentPower();
+
+    // Diğer görsel ve kural bazlı özellikler
+    public EffectType effect => data.effect;
+    public Sprite art        => data.cardArt;
+    //public string flavorText => data.flavorText;
+
+    // Konsol logları için okunabilir format
+    public override string ToString() => $"[{cardName}] Cost:{energyCost} {effect}:{power}";
 }

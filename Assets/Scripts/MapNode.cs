@@ -1,40 +1,87 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class MapNode : MonoBehaviour
 {
-    public EncounterData encounter; // Inspector'dan o seviyenin düşmanını sürükle
-    public TextMeshProUGUI nodeText;
+    public enum NodeType { Battle, Shop, UpgradeShop, Random }
     
-    public enum NodeType { Battle, Shop }
+    [Header("Düğüm Ayarları")]
     public NodeType type;
+    public bool isBoss; // Eğer bu bir boss savaşıysa işaretle
+    public EncounterData encounter; // Savaş düğümleri için
 
-    public int potionCost = 50;     // Dükkan fiyatı
-    public int healAmount = 10;
-    
+    [Header("Görsel Ayarlar")]
+    public Image iconImage; // Düğümün üzerindeki ikon objesi
+    public Sprite battleSprite;
+    public Sprite bossSprite;
+    public Sprite shopSprite;
+    public Sprite upgradeSprite;
+    public Sprite randomSprite; // Genelde "?" ikonu
+
     private void Start()
     {
-        if (encounter != null && nodeText != null)
-        {
-            nodeText.text = encounter.enemyName; // Butonun üstünde düşman adı yazsın
-        }
-
-        GetComponent<Button>().onClick.AddListener(OnNodeClicked);
+        UpdateNodeVisual();
     }
 
-    private void OnNodeClicked()
+    // Başlangıçta türüne göre doğru ikonu atar
+    public void UpdateNodeVisual()
+    {
+        if (iconImage == null) return;
+
+        switch (type)
+        {
+            case NodeType.Battle:
+                iconImage.sprite = isBoss ? bossSprite : battleSprite;
+                break;
+            case NodeType.Shop:
+                iconImage.sprite = shopSprite;
+                break;
+            case NodeType.UpgradeShop:
+                iconImage.sprite = upgradeSprite;
+                break;
+            case NodeType.Random:
+                iconImage.sprite = randomSprite;
+                break;
+        }
+    }
+
+    public void OnNodeClicked()
     {
         GameManager gm = FindObjectOfType<GameManager>();
+        NodeType activeType = type;
 
-        if (type == NodeType.Battle)
+        // Eğer düğüm "Random" ise, tıklandığı an rastgele bir türe dönüşür
+        if (type == NodeType.Random)
         {
-            gm.StartEncounter(encounter);
+            activeType = GetRandomType();
+            Debug.Log($"Gizemli düğümden çıkan: {activeType}");
         }
-        else if (type == NodeType.Shop)
+
+        ExecuteNodeLogic(gm, activeType);
+    }
+
+    private NodeType GetRandomType()
+    {
+        // Random (3) hariç diğer 3 türden (0, 1, 2) birini seç
+        int randomIndex = Random.Range(0, 3); 
+        return (NodeType)randomIndex;
+    }
+
+    private void ExecuteNodeLogic(GameManager gm, NodeType activeType)
+    {
+        switch (activeType)
         {
-            // Basitçe tıklandığında alışveriş yap (İleride Shop UI açabiliriz)
-            gm.TryBuyHealth(potionCost, healAmount);
+            case NodeType.Battle:
+                gm.StartEncounter(encounter);
+                break;
+            case NodeType.Shop:
+                // Basitçe tıklandığında alışveriş yap (Veya Shop UI aç)
+                gm.TryBuyHealth(50, 10);
+                break;
+            case NodeType.UpgradeShop:
+                // UpgradeShopView'ı bul ve aç
+                FindObjectOfType<UpgradeShopView>(true).OpenShop();
+                break;
         }
     }
 }

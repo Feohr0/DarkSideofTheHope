@@ -35,7 +35,7 @@ public class CardView : MonoBehaviour
         effectText.text = card.effect.ToString();
 
         // Flavor & görsel (null güvenli)
-        if (flavorText != null) flavorText.text = card.flavorText;
+        //if (flavorText != null) flavorText.text = card.flavorText;
         if (cardArt    != null) cardArt.sprite  = card.art;
 
         cardBackground.color = card.effect switch
