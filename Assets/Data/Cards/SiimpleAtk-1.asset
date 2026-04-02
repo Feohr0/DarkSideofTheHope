@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SiimpleAtk-1
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   cardName: atk1
-  energyCost: 1
-  power: 1
   effect: 0
   cardArt: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  flavorText: atk1
+  currentLevel: 0
+  powerLevels: 01000000020000000300000004000000
+  energyLevels: 03000000020000000100000000000000

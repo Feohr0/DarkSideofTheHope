@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
 
     public List<Card> playerCurrentDeck = new List<Card>();
     
+    [Header("Harita İlerlemesi")]
+    public MapNode currentNode; // O an bulunduğumuz düğüm
+    
     public void AddGold(int amount)
     {
         playerGold += amount;
@@ -83,6 +86,11 @@ public class GameManager : MonoBehaviour
             Debug.Log("Öldün! Oyun baştan başlıyor...");
             playerCurrentHP = playerMaxHP; // Test için resetleyebilirsin
         }
+        
+        if (playerWon)
+        {
+            CompleteCurrentNode(); // YENİ EKLENEN SATIR
+        }
     }
     
     public void UpgradeCardType(CardData cardType, int cost)
@@ -97,4 +105,26 @@ public class GameManager : MonoBehaviour
             Debug.Log($"{cardType.cardName} türü Seviye {cardType.currentLevel}'e yükseltildi!");
         }
     }
+    
+    public void CompleteCurrentNode()
+    {
+        // 1. Önce haritadaki TÜM düğümleri kilitliyoruz
+        MapNode[] allNodes = FindObjectsOfType<MapNode>();
+        foreach (MapNode node in allNodes)
+        {
+            node.isUnlocked = false;
+            node.nodeButton.interactable = false;
+        }
+
+        // 2. Sadece bulunduğumuz düğümün (currentNode) bağlı olduğu düğümleri açıyoruz!
+        if (currentNode != null)
+        {
+            foreach (MapNode next in currentNode.nextNodes)
+            {
+                next.UnlockNode();
+            }
+        }
+    }
+    
+    
 }

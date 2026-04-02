@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using System.Collections.Generic;
 public class MapNode : MonoBehaviour
 {
     public enum NodeType { Battle, Shop, UpgradeShop, Random }
@@ -18,11 +18,26 @@ public class MapNode : MonoBehaviour
     public Sprite upgradeSprite;
     public Sprite randomSprite; // Genelde "?" ikonu
 
+    [Header("Yol Bağlantıları")]
+    public List<MapNode> nextNodes; // Bu düğümden sonra gidilebilecek düğümler
+    public bool isUnlocked = false; // Tıklanabilir mi?
+    public Button nodeButton;
+    
     private void Start()
     {
         UpdateNodeVisual();
+        
+        // Düğüm kilitliyse butonu kapat
+        if (nodeButton != null)
+            nodeButton.interactable = isUnlocked;
     }
 
+    public void UnlockNode()
+    {
+        isUnlocked = true;
+        if (nodeButton != null) nodeButton.interactable = true;
+    }
+    
     // Başlangıçta türüne göre doğru ikonu atar
     public void UpdateNodeVisual()
     {
@@ -47,9 +62,13 @@ public class MapNode : MonoBehaviour
 
     public void OnNodeClicked()
     {
+        if (!isUnlocked) return; // Kilitliyse hiçbir şey yapma
+        
         GameManager gm = FindObjectOfType<GameManager>();
         NodeType activeType = type;
-
+        
+        gm.currentNode = this;
+        
         // Eğer düğüm "Random" ise, tıklandığı an rastgele bir türe dönüşür
         if (type == NodeType.Random)
         {
