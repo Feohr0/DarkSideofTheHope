@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e69314018d22149888aaf558f349669e, type: 3}
-  m_Name: SimpleShield
+  m_Name: SimpleShield-PLAYER
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  cardName: shd
+  cardName: Shield
   effect: 1
-  cardArt: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  cardArt: {fileID: 21300000, guid: a5a4f1b7b7e358845b17edf881aed96e, type: 3}
   currentLevel: 0
   powerLevels: 01000000020000000300000004000000
   energyLevels: 05000000040000000300000002000000

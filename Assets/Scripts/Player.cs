@@ -36,16 +36,20 @@ public class Player
     public void RefillEnergy() => currentEnergy = maxEnergy;
 
     // Desteden kart çek
-    public void DrawCard()
+    public bool DrawCard()
     {
-        if (deck.Count == 0) { Debug.Log("Deste bitti!"); return; }
+        // Eğer destede kart kalmadıysa false döndür (çekemedi)
+        if (deck.Count == 0) 
+        {
+            return false; 
+        }
 
         Card drawn = deck[0];
         deck.RemoveAt(0);
         hand.Add(drawn);
-        Debug.Log($"{playerName} çekti: {drawn}");
+        return true; // Başarıyla çekildi
     }
-
+    
     // Kart oyna (enerji yeterliyse)
     public bool PlayCard(Card card)
     {

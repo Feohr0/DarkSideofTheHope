@@ -91,6 +91,12 @@ public class GameManager : MonoBehaviour
         {
             CompleteCurrentNode(); // YENİ EKLENEN SATIR
         }
+        else
+        {
+            // UI'daki log kısmına neden kaybettiğini yaz
+            FindObjectOfType<UIManager>().hudView.ShowLog("DESTE TÜKENDİ! ELENDİN.");
+            Debug.Log("Yenilgi!");
+        }
     }
     
     public void UpgradeCardType(CardData cardType, int cost)

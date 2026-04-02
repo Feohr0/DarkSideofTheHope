@@ -37,7 +37,7 @@ public class TurnManager : MonoBehaviour
         }
 
         // Oyuncuyu mevcut canıyla yarat
-        player = new Player("Oyuncu", pMaxHP, pCurrentHP, 3);
+        player = new Player("Oyuncu", pMaxHP, pCurrentHP, 6);
         enemy  = new Player(encounter.enemyName, encounter.maxHealth, encounter.maxHealth, encounter.maxEnergy);
 
         player.deck = playerDeck.BuildShuffledDeck();
@@ -62,22 +62,27 @@ public class TurnManager : MonoBehaviour
         currentActor.shield = 0;
         currentActor.RefillEnergy();
 
-        // 1. Önce eldeki kalan kartları temizle (isteğe bağlı çöpe atma mekaniği de eklenebilir)
+        // Tur başında eli temizle (1. seçeneğin gereği)
         currentActor.hand.Clear();
 
-        // 2. Her turun başında oyuncuya SABİT 4 kart ver
+        // 4 kart çekmeye çalış
         for (int i = 0; i < 4; i++) 
         {
-            currentActor.DrawCard();
+            bool hasCard = currentActor.DrawCard();
+
+            // Eğer kart çekilemediyse ve sıra oyuncudaysa oyunu bitir
+            if (!hasCard && currentActor == player)
+            {
+                Debug.Log("Deste tükendi! Kaynakların bittiği için yenildin.");
+                FindObjectOfType<GameManager>().EndBattle(false); // Kaybetme durumu
+                return; // Fonksiyondan çık ki hata vermesin
+            }
         }
+    
+        FindObjectOfType<UIManager>()?.Refresh();
 
-        Debug.Log($"=== {currentActor.playerName}'ın turu ===");
-
-        // Düşmanın turu başladıysa AI'ı devreye sok
         if (currentActor == enemy)
             StartCoroutine(RunEnemyTurn());
-        
-        FindObjectOfType<UIManager>()?.Refresh();
     }
     
     private IEnumerator RunEnemyTurn()
