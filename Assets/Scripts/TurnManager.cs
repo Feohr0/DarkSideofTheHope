@@ -17,30 +17,44 @@ public class TurnManager : MonoBehaviour
     public DeckData playerDeckData;
     public DeckData enemyDeckData;
     
+    [Header("3D Çevre")]
+    public Transform enemySpawnPoint;       // Sahnedeki EnemySpawnPoint'i buraya sürükle
+    private GameObject currentEnemyModel;
+    
     public bool   IsPlayerTurn      => currentActor == player;
     public string CurrentActorName  => currentActor.playerName;
-    
-    public void InitBattle(DeckData playerDeck, EncounterData encounter)
+    private EncounterData currentEncounter;
+    public void InitBattle(DeckData playerDeck, EncounterData encounter, int pMaxHP, int pCurrentHP)
     {
-        gameOver = false; 
+        currentEncounter = encounter;
+        gameOver = false;
         StopAllCoroutines();
-        
-        // 1. Oyuncuyu ve Düşmanı oluştur
-        player = new Player("Oyuncu", 30, 3);
-        enemy  = new Player(encounter.enemyName, encounter.maxHealth, encounter.maxEnergy);
+        ClearBattlefield();
 
-        // 2. Desteleri yükle
+        if (encounter.enemyPrefab != null && enemySpawnPoint != null)
+        {
+            currentEnemyModel = Instantiate(encounter.enemyPrefab, enemySpawnPoint.position, enemySpawnPoint.rotation);
+        }
+
+        // Oyuncuyu mevcut canıyla yarat
+        player = new Player("Oyuncu", pMaxHP, pCurrentHP, 3);
+        enemy  = new Player(encounter.enemyName, encounter.maxHealth, encounter.maxHealth, encounter.maxEnergy);
+
         player.deck = playerDeck.BuildShuffledDeck();
         enemy.deck  = encounter.enemyDeck.BuildShuffledDeck();
 
-        // 3. UI Manager'ı zorla güncelle ki yeni HP değerlerini alsın
-        FindObjectOfType<UIManager>().hudView.Init(player.health, enemy.health);
-        FindObjectOfType<UIManager>().hudView.ShowLog("Savaş Başladı!");
-        
-        // 4. Savaşı Başlat
         currentActor = player;
         currentTarget = enemy;
         BeginTurn(); 
+    }
+
+    // Savaş bitince veya haritaya dönünce modeli temizlemek için
+    public void ClearBattlefield()
+    {
+        if (currentEnemyModel != null)
+        {
+            Destroy(currentEnemyModel);
+        }
     }
 
     public void BeginTurn()
@@ -109,8 +123,13 @@ public class TurnManager : MonoBehaviour
 
         if (!currentTarget.IsAlive)
         {
-            Debug.Log($"🏆 {currentActor.playerName} kazandı!");
             gameOver = true;
+            // Düşman öldüğünde parayı gönder
+            if (currentTarget == enemy) 
+            {
+                FindObjectOfType<GameManager>().AddGold(currentEncounter.goldReward);
+            }
+        
             FindObjectOfType<GameManager>().EndBattle(true);
             return;
         }

@@ -4,23 +4,34 @@ using UnityEngine;
 public class Player
 {
     public string playerName;
-    public int    health;
-    public int    maxEnergy;   // her turun başında sıfırlanacak maksimum enerji
+    public int    maxHealth;      // YENİ: Artık her karakter kendi max canını biliyor
+    public int    health;         // Anlık can
+    public int    maxEnergy;
     public int    currentEnergy;
+    public int    shield = 0;     // Maksimum can
 
     public List<Card> hand  = new List<Card>();   // eldeki kartlar
     public List<Card> deck  = new List<Card>();   // çekilmemiş deste
     
-    public int shield = 0; 
-    
-    public Player(string name, int hp, int maxEn)
+    public Player(string name, int maxHp, int currentHp, int maxEn)
     {
         playerName = name;
-        health     = hp;
+        maxHealth  = maxHp;
+        health     = currentHp;
         maxEnergy  = maxEn;
         currentEnergy = maxEnergy;
     }
 
+    // 2. DÜŞMAN İÇİN (Savaşa hep full canla başlar)
+    public Player(string name, int maxHp, int maxEn)
+    {
+        playerName = name;
+        maxHealth  = maxHp;
+        health     = maxHp; // Başlangıçta anlık canı, max cana eşitle
+        maxEnergy  = maxEn;
+        currentEnergy = maxEnergy;
+    }
+    
     // Tur başında enerjiyi doldur
     public void RefillEnergy() => currentEnergy = maxEnergy;
 

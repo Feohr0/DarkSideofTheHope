@@ -24,24 +24,39 @@ public class HUDView : MonoBehaviour
     private int playerMaxHP;
     private int enemyMaxHP;
 
+    [Header("Ekonomi UI")]
+    public TextMeshProUGUI goldText;
+
+    // UIManager.cs içindeki Refresh fonksiyonunda bunu çağırabilirsin
+    public void UpdateGold(int currentGold)
+    {
+        if (goldText != null) goldText.text = $"💰 {currentGold}";
+    }
+    
     public void Init(int pMaxHP, int eMaxHP)
     {
         playerMaxHP = pMaxHP;
         enemyMaxHP  = eMaxHP;
+        
+        Debug.Log(playerMaxHP + eMaxHP);
     }
 
     public void UpdatePlayer(Player p)
     {
-        playerHPBar.value    = (float)p.health / playerMaxHP;
-        playerHPText.text    = $"{p.health} / {playerMaxHP}";
+        // Artık maxHealth değerini direkt p'den çekiyoruz!
+        playerHPBar.value     = (float)p.health / p.maxHealth;
+        playerHPText.text     = $"{p.health} / {p.maxHealth}";
+        
         playerEnergyText.text = $"⚡ {p.currentEnergy} / {p.maxEnergy}";
         playerShieldText.text = p.shield > 0 ? $"🛡 {p.shield}" : "";
     }
 
     public void UpdateEnemy(Player e)
     {
-        enemyHPBar.value   = (float)e.health / enemyMaxHP;
-        enemyHPText.text   = $"{e.health} / {enemyMaxHP}";
+        // Aynı şekilde düşman için de:
+        enemyHPBar.value     = (float)e.health / e.maxHealth;
+        enemyHPText.text     = $"{e.health} / {e.maxHealth}";
+        
         enemyShieldText.text = e.shield > 0 ? $"🛡 {e.shield}" : "";
     }
 

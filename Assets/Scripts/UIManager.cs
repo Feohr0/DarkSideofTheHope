@@ -3,6 +3,8 @@ using UnityEngine;
 // TurnManager ile View katmanını birbirine bağlar
 public class UIManager : MonoBehaviour
 {
+    public GameManager gameManager;
+    
     [Header("Bağımlılıklar")]
     public TurnManager turnManager;
     public HandView    handView;
@@ -25,7 +27,9 @@ public class UIManager : MonoBehaviour
         hudView.UpdatePlayer(p);
         hudView.UpdateEnemy(e);
         hudView.SetTurnText(turnManager.CurrentActorName);
-
+        
+        hudView.UpdateGold(gameManager.playerGold);
+        
         bool isPlayerTurn = turnManager.IsPlayerTurn;
         hudView.SetEndTurnInteractable(isPlayerTurn);
 

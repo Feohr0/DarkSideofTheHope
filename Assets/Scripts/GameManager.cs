@@ -9,9 +9,38 @@ public class GameManager : MonoBehaviour
     [Header("Bağımlılıklar")]
     public TurnManager turnManager;
     public DeckData playerMainDeck;  // Oyuncunun asıl destesi
+    
+    [Header("Kalıcı Oyuncu Verileri")]
+    public int playerMaxHP = 30;
+    public int playerCurrentHP;
+    
+    [Header("Ekonomi")]
+    public int playerGold = 0;
 
+    public void AddGold(int amount)
+    {
+        playerGold += amount;
+        Debug.Log("Coin Kazandın! Toplam: " + playerGold);
+    }
+
+    // Potion Shop Fonksiyonu
+    public bool TryBuyHealth(int cost, int healAmount)
+    {
+        if (playerGold >= cost)
+        {
+            playerGold -= cost;
+            playerCurrentHP = Mathf.Min(playerCurrentHP + healAmount, playerMaxHP);
+            Debug.Log($"İksir alındı! Kalan Altın: {playerGold} | Yeni HP: {playerCurrentHP}");
+            return true;
+        }
+        
+        Debug.Log("Yetersiz altın!");
+        return false;
+    }
+    
     void Start()
     {
+        playerCurrentHP = playerMaxHP;
         // Oyun başladığında Haritayı aç, Savaşı gizle
         ShowMap();
     }
@@ -28,17 +57,21 @@ public class GameManager : MonoBehaviour
         mapCanvas.SetActive(false);
         battleCanvas.SetActive(true);
 
-        // 2. TurnManager'a düşman verisini yolla ve savaşı başlat
-        turnManager.InitBattle(playerMainDeck, encounterData);
+        turnManager.InitBattle(playerMainDeck, encounterData, playerMaxHP, playerCurrentHP);
     }
 
     public void EndBattle(bool playerWon)
     {
+        // Savaş biter bitmez oyuncunun kalan canını kaydet
+        playerCurrentHP = turnManager.player.health;
+
+        turnManager.ClearBattlefield();
         ShowMap();
 
-        if (playerWon)
-            Debug.Log("Savaş kazanıldı! Haritada bir sonraki adıma geçebilirsin.");
-        else
-            Debug.Log("Oyun Bitti! Kaybettin.");
+        if (playerCurrentHP <= 0)
+        {
+            Debug.Log("Öldün! Oyun baştan başlıyor...");
+            playerCurrentHP = playerMaxHP; // Test için resetleyebilirsin
+        }
     }
 }

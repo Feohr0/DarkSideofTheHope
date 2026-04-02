@@ -15,5 +15,6 @@ MonoBehaviour:
   enemyName: 1
   maxHealth: 10
   maxEnergy: 3
+  goldReward: 10
   enemyDeck: {fileID: 11400000, guid: 077038cdbd644c344b65d14e5506ea25, type: 2}
-  enemySprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  enemyPrefab: {fileID: 7329011354118995176, guid: 33e177f66b6570746a042648d23a0bb9, type: 3}
