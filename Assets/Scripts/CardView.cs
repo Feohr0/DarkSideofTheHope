@@ -30,9 +30,9 @@ public class CardView : MonoBehaviour
         onClickCallback = onClick;
 
         nameText.text   = card.cardName;
-        costText.text   = card.energyCost.ToString();
-        powerText.text  = card.power.ToString();
-        effectText.text = card.effect.ToString();
+        costText.text   = "cost: " + card.energyCost.ToString();
+        powerText.text  = "power: " + card.power.ToString();
+        effectText.text = " ";
 
         // Flavor & görsel (null güvenli)
         //if (flavorText != null) flavorText.text = card.flavorText;

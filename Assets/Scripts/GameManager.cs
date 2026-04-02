@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class GameManager : MonoBehaviour
     [Header("Ekonomi")]
     public int playerGold = 0;
 
+    public TextMeshProUGUI goldText;
+    
     public List<Card> playerCurrentDeck = new List<Card>();
     
     [Header("Harita İlerlemesi")]
@@ -28,7 +31,12 @@ public class GameManager : MonoBehaviour
         playerGold += amount;
         Debug.Log("Coin Kazandın! Toplam: " + playerGold);
     }
-
+    
+    private void RefreshGoldText()
+    {
+        if (goldText != null) goldText.text = $"💰 {playerGold}";
+    }
+    
     // Potion Shop Fonksiyonu
     public bool TryBuyHealth(int cost, int healAmount)
     {
@@ -37,6 +45,7 @@ public class GameManager : MonoBehaviour
             playerGold -= cost;
             playerCurrentHP = Mathf.Min(playerCurrentHP + healAmount, playerMaxHP);
             Debug.Log($"İksir alındı! Kalan Altın: {playerGold} | Yeni HP: {playerCurrentHP}");
+            RefreshGoldText();
             return true;
         }
         

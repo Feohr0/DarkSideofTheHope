@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level-1 1
   m_EditorClassIdentifier: Assembly-CSharp::EncounterData
   enemyName: Lizard
-  maxHealth: 10
+  maxHealth: 15
   maxEnergy: 3
   goldReward: 15
   enemyDeck: {fileID: 11400000, guid: 077038cdbd644c344b65d14e5506ea25, type: 2}
