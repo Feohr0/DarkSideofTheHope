@@ -95,7 +95,7 @@ public class MapNode : MonoBehaviour
                 break;
             case NodeType.Shop:
                 // Basitçe tıklandığında alışveriş yap (Veya Shop UI aç)
-                gm.TryBuyHealth(50, 10);
+                gm.TryBuyHealth(10, 10);
                 break;
             case NodeType.UpgradeShop:
                 // UpgradeShopView'ı bul ve aç
