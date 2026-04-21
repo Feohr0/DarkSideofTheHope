@@ -13,6 +13,11 @@ public class TurnManager : MonoBehaviour
     
     private bool gameOver = false;
     
+    [Header("Ses")]
+    public AudioSource sfxSource;
+    public AudioClip attackSfx;
+    public AudioClip shieldSfx;
+    
     [Header("Desteler (ScriptableObject)")]
     public DeckData playerDeckData;
     public DeckData enemyDeckData;
@@ -139,6 +144,9 @@ public class TurnManager : MonoBehaviour
         bool played = currentActor.PlayCard(card);
         if (!played) return;
         
+        if (currentActor == player)
+            PlayCardSfx(card);
+        
         if (currentActor == enemy && currentEncounter != null)
         {
             battleSystem.ApplyCard(
@@ -171,6 +179,21 @@ public class TurnManager : MonoBehaviour
         {
             Debug.Log("Enerji tükendi, tur geçiyor...");
             EndTurn();
+        }
+    }
+    
+    private void PlayCardSfx(Card card)
+    {
+        if (sfxSource == null || card == null) return;
+        
+        switch (card.effect)
+        {
+            case Card.EffectType.Damage:
+                if (attackSfx != null) sfxSource.PlayOneShot(attackSfx);
+                break;
+            case Card.EffectType.Shield:
+                if (shieldSfx != null) sfxSource.PlayOneShot(shieldSfx);
+                break;
         }
     }
 
