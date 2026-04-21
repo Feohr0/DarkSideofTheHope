@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
     [Header("Paneller (Canvas)")]
     public GameObject mapCanvas;     // Harita UI'ı
     public GameObject battleCanvas;  // Savaş HUD ve El UI'ı
+    
+    [Header("Arkaplan")]
+    public SpriteRenderer backgroundRenderer;
+    public Sprite[] backgroundSprites; // 0: Map, 1: Normal, 2: Boss
 
     [Header("Bağımlılıklar")]
     public TurnManager turnManager;
@@ -107,6 +111,7 @@ public class GameManager : MonoBehaviour
     {
         battleCanvas.SetActive(false);
         mapCanvas.SetActive(true);
+        SetBackgroundIndex(0);
     }
     
     public void StartEncounter(EncounterData encounterData)
@@ -114,6 +119,9 @@ public class GameManager : MonoBehaviour
         // 1. Haritayı kapat, Savaşı aç
         mapCanvas.SetActive(false);
         battleCanvas.SetActive(true);
+        
+        bool isBoss = currentNode != null && currentNode.isBoss;
+        SetBackgroundIndex(isBoss ? 2 : 1);
 
         turnManager.InitBattle(playerMainDeck, encounterData, playerMaxHP, playerCurrentHP);
     }
@@ -144,6 +152,16 @@ public class GameManager : MonoBehaviour
         // Normal savaş kazanıldı → haritaya dön, ilerlemeyi aç
         ShowMap();
         CompleteCurrentNode();
+    }
+
+    private void SetBackgroundIndex(int index)
+    {
+        if (backgroundRenderer == null) return;
+        if (backgroundSprites == null || backgroundSprites.Length == 0) return;
+        if (index < 0 || index >= backgroundSprites.Length) return;
+        if (backgroundSprites[index] == null) return;
+
+        backgroundRenderer.sprite = backgroundSprites[index];
     }
 
     private void ResetProgress()

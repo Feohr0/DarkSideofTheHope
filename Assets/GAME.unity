@@ -8613,6 +8613,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   mapCanvas: {fileID: 786391575}
   battleCanvas: {fileID: 2106667224}
+  backgroundRenderer: {fileID: 208068998}
+  backgroundSprites:
+  - {fileID: 21300000, guid: e872dbcfc9d7d4fc68ebe94e6642b48e, type: 3}
+  - {fileID: 21300000, guid: 7e30004e2657d44d190ce8b4d4dc678f, type: 3}
+  - {fileID: 21300000, guid: d8cb1756d156b43f9bb24fb41dbf520e, type: 3}
   turnManager: {fileID: 1385043197}
   playerMainDeck: {fileID: 11400000, guid: 8f3d28b23feb0ba4392176219a660c1f, type: 2}
   playerMaxHP: 30
