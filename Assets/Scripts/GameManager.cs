@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -88,23 +89,46 @@ public class GameManager : MonoBehaviour
         playerCurrentHP = turnManager.player.health;
 
         turnManager.ClearBattlefield();
-        ShowMap();
 
-        if (playerCurrentHP <= 0)
+        // Kaybettiysek: run bitti → progress sıfırla ve menüye dön
+        if (!playerWon)
         {
-            Debug.Log("Öldün! Oyun baştan başlıyor...");
-            playerCurrentHP = playerMaxHP; // Test için resetleyebilirsin
+            ResetProgress();
+            SceneManager.LoadScene(0);
+            return;
         }
+
+        // Kazandıysak: sadece boss düğümünden sonra run biter
+        if (currentNode != null && currentNode.isBoss)
+        {
+            ResetProgress();
+            SceneManager.LoadScene(0);
+            return;
+        }
+
+        // Normal savaş kazanıldı → haritaya dön, ilerlemeyi aç
+        ShowMap();
+        CompleteCurrentNode();
+    }
+
+    private void ResetProgress()
+    {
+        Time.timeScale = 1f;
         
-        if (playerWon)
+        playerGold = 0;
+        RefreshGoldText();
+        
+        playerCurrentHP = playerMaxHP;
+
+        currentNode = null;
+        
+        playerCurrentDeck.Clear();
+        if (playerMainDeck != null && playerMainDeck.cards != null)
         {
-            CompleteCurrentNode(); // YENİ EKLENEN SATIR
-        }
-        else
-        {
-            // UI'daki log kısmına neden kaybettiğini yaz
-            FindObjectOfType<UIManager>().hudView.ShowLog("DESTE TÜKENDİ! ELENDİN.");
-            Debug.Log("Yenilgi!");
+            foreach (CardData cardData in playerMainDeck.cards)
+            {
+                playerCurrentDeck.Add(cardData.ToCard());
+            }
         }
     }
     
