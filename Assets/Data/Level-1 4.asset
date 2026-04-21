@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e008e43994a3204db41b2cf60970c28, type: 3}
   m_Name: Level-1 4
   m_EditorClassIdentifier: Assembly-CSharp::EncounterData
-  enemyName: GOLEM BOSS
+  enemyName: "D\xDC\u015EMAN"
   maxHealth: 70
   maxEnergy: 3
+  enemyIndex: 6
   goldReward: 100
   enemyDeck: {fileID: 11400000, guid: 077038cdbd644c344b65d14e5506ea25, type: 2}
   enemyPrefab: {fileID: 3749943099958918403, guid: ce3233dd94cbe5549be5141f78c7ca49, type: 3}

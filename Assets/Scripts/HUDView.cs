@@ -30,7 +30,7 @@ public class HUDView : MonoBehaviour
     // UIManager.cs içindeki Refresh fonksiyonunda bunu çağırabilirsin
     public void UpdateGold(int currentGold)
     {
-        if (goldText != null) goldText.text = $"💰 {currentGold}";
+        if (goldText != null) goldText.text = $"RUH PUANI: {currentGold}";
     }
     
     public void Init(int pMaxHP, int eMaxHP)
@@ -47,8 +47,8 @@ public class HUDView : MonoBehaviour
         playerHPBar.value     = (float)p.health / p.maxHealth;
         playerHPText.text     = $"{p.health} / {p.maxHealth}";
         
-        playerEnergyText.text = $"⚡ {p.currentEnergy} / {p.maxEnergy}";
-        playerShieldText.text = p.shield > 0 ? $"🛡 {p.shield}" : "";
+        playerEnergyText.text = $"mana: {p.currentEnergy} / {p.maxEnergy}";
+        playerShieldText.text = p.shield > 0 ? $"kalkan: {p.shield}" : "";
     }
 
     public void UpdateEnemy(Player e)
@@ -57,11 +57,11 @@ public class HUDView : MonoBehaviour
         enemyHPBar.value     = (float)e.health / e.maxHealth;
         enemyHPText.text     = $"{e.health} / {e.maxHealth}";
         
-        enemyShieldText.text = e.shield > 0 ? $"🛡 {e.shield}" : "";
+        enemyShieldText.text = e.shield > 0 ? $"kalkan: {e.shield}" : "";
     }
 
     public void SetTurnText(string actorName)
-        => turnText.text = $"{actorName}'ın Turu";
+        => turnText.text = $"Sıra {actorName}da";
 
     public void SetEndTurnInteractable(bool state)
         => endTurnButton.interactable = state;

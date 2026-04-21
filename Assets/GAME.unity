@@ -1257,11 +1257,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: 0617116399b82fb4ea230c501b71ca6a, type: 2}
   iconImage: {fileID: 229778446}
-  battleSprite: {fileID: 21300000, guid: d2b120fa1eba9ac41ae704ca41c415a0, type: 3}
-  bossSprite: {fileID: 21300000, guid: c2ae9b8e331fe4f46bb0770235b55018, type: 3}
-  shopSprite: {fileID: 21300000, guid: cb0c17807f9e36d47bf808700f71095d, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: 3b8676039c8a8994d98f74a0e93fb76b, type: 3}
-  randomSprite: {fileID: 21300000, guid: 13149934185b8be44a818ae0c46259af, type: 3}
+  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
+  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
+  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
+  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
   nextNodes:
   - {fileID: 673209304}
   isUnlocked: 0
@@ -1342,7 +1342,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d2b120fa1eba9ac41ae704ca41c415a0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1419,15 +1419,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cbf146118705c0540815372587172262, type: 2}
-  m_sharedMaterial: {fileID: -4962550304603051794, guid: cbf146118705c0540815372587172262, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 84334099c5ecf444f9c1e0c46c6f3ac6, type: 2}
+  m_sharedMaterial: {fileID: -658450551954832704, guid: 84334099c5ecf444f9c1e0c46c6f3ac6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1687,7 +1687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &358961742
 Transform:
   m_ObjectHideFlags: 0
@@ -1697,7 +1697,7 @@ Transform:
   m_GameObject: {fileID: 358961741}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13917309, y: -0, z: -0, w: 0.9902681}
-  m_LocalPosition: {x: 0, y: -0.63, z: 0}
+  m_LocalPosition: {x: 0, y: -1.04, z: 0}
   m_LocalScale: {x: 0.66, y: 0.66, z: 0.66}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1838,7 +1838,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 1
   m_Spacing: 40
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -2136,7 +2136,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d2b120fa1eba9ac41ae704ca41c415a0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2170,11 +2170,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: 732cd47a7c046cd43a284c5c90bfe859, type: 2}
   iconImage: {fileID: 456338315}
-  battleSprite: {fileID: 21300000, guid: d2b120fa1eba9ac41ae704ca41c415a0, type: 3}
-  bossSprite: {fileID: 21300000, guid: c2ae9b8e331fe4f46bb0770235b55018, type: 3}
-  shopSprite: {fileID: 21300000, guid: cb0c17807f9e36d47bf808700f71095d, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: 3b8676039c8a8994d98f74a0e93fb76b, type: 3}
-  randomSprite: {fileID: 21300000, guid: 13149934185b8be44a818ae0c46259af, type: 3}
+  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
+  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
+  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
+  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
   nextNodes:
   - {fileID: 2142707404}
   - {fileID: 1649244105}
@@ -2787,15 +2787,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cbf146118705c0540815372587172262, type: 2}
-  m_sharedMaterial: {fileID: -4962550304603051794, guid: cbf146118705c0540815372587172262, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 84334099c5ecf444f9c1e0c46c6f3ac6, type: 2}
+  m_sharedMaterial: {fileID: -658450551954832704, guid: 84334099c5ecf444f9c1e0c46c6f3ac6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3142,8 +3142,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 286}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: 0, y: 292.8}
+  m_SizeDelta: {x: 80, y: 106.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &673209304
 MonoBehaviour:
@@ -3161,11 +3161,11 @@ MonoBehaviour:
   isBoss: 1
   encounter: {fileID: 11400000, guid: 19eb1eeb95ca82745a201774bb8fed19, type: 2}
   iconImage: {fileID: 673209306}
-  battleSprite: {fileID: 21300000, guid: d2b120fa1eba9ac41ae704ca41c415a0, type: 3}
-  bossSprite: {fileID: 21300000, guid: c2ae9b8e331fe4f46bb0770235b55018, type: 3}
-  shopSprite: {fileID: 21300000, guid: cb0c17807f9e36d47bf808700f71095d, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: 3b8676039c8a8994d98f74a0e93fb76b, type: 3}
-  randomSprite: {fileID: 21300000, guid: 13149934185b8be44a818ae0c46259af, type: 3}
+  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
+  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
+  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
+  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
   nextNodes: []
   isUnlocked: 0
   nodeButton: {fileID: 673209305}
@@ -3245,7 +3245,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c2ae9b8e331fe4f46bb0770235b55018, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3543,8 +3543,8 @@ Transform:
   m_GameObject: {fileID: 760463641}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13917309, y: -0, z: -0, w: 0.9902681}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.86, y: 0.86, z: 0.86}
+  m_LocalPosition: {x: 0, y: -1.03, z: 0}
+  m_LocalScale: {x: 0.74, y: 0.74, z: 0.74}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1519878675}
@@ -3663,7 +3663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &786391576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3734,7 +3734,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786391575}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -4272,7 +4272,7 @@ Transform:
   m_GameObject: {fileID: 875692811}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13917309, y: -0, z: -0, w: 0.9902681}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.73, z: 0}
   m_LocalScale: {x: 0.86, y: 0.86, z: 0.86}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4419,15 +4419,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cbf146118705c0540815372587172262, type: 2}
-  m_sharedMaterial: {fileID: -4962550304603051794, guid: cbf146118705c0540815372587172262, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 84334099c5ecf444f9c1e0c46c6f3ac6, type: 2}
+  m_sharedMaterial: {fileID: -658450551954832704, guid: 84334099c5ecf444f9c1e0c46c6f3ac6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4293190884
+  m_fontColor: {r: 0.89433956, g: 0.89433956, b: 0.89433956, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4693,15 +4693,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cbf146118705c0540815372587172262, type: 2}
-  m_sharedMaterial: {fileID: -4962550304603051794, guid: cbf146118705c0540815372587172262, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 84334099c5ecf444f9c1e0c46c6f3ac6, type: 2}
+  m_sharedMaterial: {fileID: -658450551954832704, guid: 84334099c5ecf444f9c1e0c46c6f3ac6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4826,11 +4826,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: 732cd47a7c046cd43a284c5c90bfe859, type: 2}
   iconImage: {fileID: 916506382}
-  battleSprite: {fileID: 21300000, guid: d2b120fa1eba9ac41ae704ca41c415a0, type: 3}
-  bossSprite: {fileID: 21300000, guid: c2ae9b8e331fe4f46bb0770235b55018, type: 3}
-  shopSprite: {fileID: 21300000, guid: cb0c17807f9e36d47bf808700f71095d, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: 3b8676039c8a8994d98f74a0e93fb76b, type: 3}
-  randomSprite: {fileID: 21300000, guid: 13149934185b8be44a818ae0c46259af, type: 3}
+  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
+  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
+  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
+  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
   nextNodes:
   - {fileID: 1649244105}
   isUnlocked: 0
@@ -4911,7 +4911,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 13149934185b8be44a818ae0c46259af, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5162,7 +5162,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -6081,7 +6081,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -223}
+  m_AnchoredPosition: {x: 0, y: -350}
   m_SizeDelta: {x: 900, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1127782157
@@ -6200,8 +6200,8 @@ Transform:
   m_GameObject: {fileID: 1154470906}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13917309, y: -0, z: -0, w: 0.9902681}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.86, y: 0.86, z: 0.86}
+  m_LocalPosition: {x: 0, y: -1.03, z: 0}
+  m_LocalScale: {x: 0.74, y: 0.74, z: 0.74}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1102880211}
@@ -6422,15 +6422,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cbf146118705c0540815372587172262, type: 2}
-  m_sharedMaterial: {fileID: -4962550304603051794, guid: cbf146118705c0540815372587172262, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 84334099c5ecf444f9c1e0c46c6f3ac6, type: 2}
+  m_sharedMaterial: {fileID: -658450551954832704, guid: 84334099c5ecf444f9c1e0c46c6f3ac6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4293190884
+  m_fontColor: {r: 0.89433956, g: 0.89433956, b: 0.89433956, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6896,10 +6896,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'souls: 0'
+  m_text: 'RUH PUANI: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cbf146118705c0540815372587172262, type: 2}
-  m_sharedMaterial: {fileID: -4962550304603051794, guid: cbf146118705c0540815372587172262, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 84334099c5ecf444f9c1e0c46c6f3ac6, type: 2}
+  m_sharedMaterial: {fileID: -658450551954832704, guid: 84334099c5ecf444f9c1e0c46c6f3ac6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6923,8 +6923,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 67.1
-  m_fontSizeBase: 67.1
+  m_fontSize: 50.3
+  m_fontSizeBase: 50.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7448,6 +7448,14 @@ MonoBehaviour:
   playerDeckData: {fileID: 11400000, guid: 8f3d28b23feb0ba4392176219a660c1f, type: 2}
   enemyDeckData: {fileID: 11400000, guid: 077038cdbd644c344b65d14e5506ea25, type: 2}
   enemySpawnPoint: {fileID: 1740235812}
+  enemySprites:
+  - {fileID: 760463641}
+  - {fileID: 1804353738}
+  - {fileID: 1154470906}
+  - {fileID: 1912020189}
+  - {fileID: 875692811}
+  - {fileID: 2020438294}
+  - {fileID: 358961741}
 --- !u!114 &1385043198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7603,7 +7611,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 456338313}
   - {fileID: 1890860444}
@@ -7622,7 +7630,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 900, y: 900}
+  m_SizeDelta: {x: 1005.91, y: 1094.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1417049058
 MonoBehaviour:
@@ -7644,7 +7652,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0dbb335af150d8841a84434b0a7d023f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99bcad136e7c83f4fa93dd12f7a30d77, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8026,11 +8034,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: c7f2e47532b45a647a0d0104b02a1990, type: 2}
   iconImage: {fileID: 1649244107}
-  battleSprite: {fileID: 21300000, guid: d2b120fa1eba9ac41ae704ca41c415a0, type: 3}
-  bossSprite: {fileID: 21300000, guid: c2ae9b8e331fe4f46bb0770235b55018, type: 3}
-  shopSprite: {fileID: 21300000, guid: cb0c17807f9e36d47bf808700f71095d, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: 3b8676039c8a8994d98f74a0e93fb76b, type: 3}
-  randomSprite: {fileID: 21300000, guid: 13149934185b8be44a818ae0c46259af, type: 3}
+  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
+  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
+  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
+  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
   nextNodes:
   - {fileID: 229778444}
   isUnlocked: 0
@@ -8111,7 +8119,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cb0c17807f9e36d47bf808700f71095d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -8266,15 +8274,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cbf146118705c0540815372587172262, type: 2}
-  m_sharedMaterial: {fileID: -4962550304603051794, guid: cbf146118705c0540815372587172262, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 84334099c5ecf444f9c1e0c46c6f3ac6, type: 2}
+  m_sharedMaterial: {fileID: -658450551954832704, guid: 84334099c5ecf444f9c1e0c46c6f3ac6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8772,8 +8780,8 @@ Transform:
   m_GameObject: {fileID: 1804353738}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13917309, y: -0, z: -0, w: 0.9902681}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.86, y: 0.86, z: 0.86}
+  m_LocalPosition: {x: 0, y: -1.03, z: 0}
+  m_LocalScale: {x: 0.74, y: 0.74, z: 0.74}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 118989180}
@@ -8981,7 +8989,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -259, y: -131}
-  m_SizeDelta: {x: 100.7, y: 98.5}
+  m_SizeDelta: {x: 70.5, y: 98.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1849520430
 MonoBehaviour:
@@ -8999,11 +9007,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: c7f2e47532b45a647a0d0104b02a1990, type: 2}
   iconImage: {fileID: 1849520432}
-  battleSprite: {fileID: 21300000, guid: d2b120fa1eba9ac41ae704ca41c415a0, type: 3}
-  bossSprite: {fileID: 21300000, guid: c2ae9b8e331fe4f46bb0770235b55018, type: 3}
-  shopSprite: {fileID: 21300000, guid: cb0c17807f9e36d47bf808700f71095d, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: 3b8676039c8a8994d98f74a0e93fb76b, type: 3}
-  randomSprite: {fileID: 21300000, guid: 13149934185b8be44a818ae0c46259af, type: 3}
+  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
+  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
+  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
+  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
   nextNodes:
   - {fileID: 2142707404}
   isUnlocked: 0
@@ -9084,7 +9092,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3b8676039c8a8994d98f74a0e93fb76b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9232,11 +9240,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: c7f2e47532b45a647a0d0104b02a1990, type: 2}
   iconImage: {fileID: 1890860447}
-  battleSprite: {fileID: 21300000, guid: d2b120fa1eba9ac41ae704ca41c415a0, type: 3}
-  bossSprite: {fileID: 21300000, guid: c2ae9b8e331fe4f46bb0770235b55018, type: 3}
-  shopSprite: {fileID: 21300000, guid: cb0c17807f9e36d47bf808700f71095d, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: 3b8676039c8a8994d98f74a0e93fb76b, type: 3}
-  randomSprite: {fileID: 21300000, guid: 13149934185b8be44a818ae0c46259af, type: 3}
+  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
+  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
+  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
+  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
   nextNodes:
   - {fileID: 456338317}
   - {fileID: 1849520430}
@@ -9318,7 +9326,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d2b120fa1eba9ac41ae704ca41c415a0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9363,8 +9371,8 @@ Transform:
   m_GameObject: {fileID: 1912020189}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13917309, y: -0, z: -0, w: 0.9902681}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.86, y: 0.86, z: 0.86}
+  m_LocalPosition: {x: 0, y: -0.55, z: 0}
+  m_LocalScale: {x: 0.74, y: 0.74, z: 0.74}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1212356906}
@@ -9546,11 +9554,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: b850a8425fda9c84784419908a271bf7, type: 2}
   iconImage: {fileID: 1971688986}
-  battleSprite: {fileID: 21300000, guid: d2b120fa1eba9ac41ae704ca41c415a0, type: 3}
-  bossSprite: {fileID: 21300000, guid: c2ae9b8e331fe4f46bb0770235b55018, type: 3}
-  shopSprite: {fileID: 21300000, guid: cb0c17807f9e36d47bf808700f71095d, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: 3b8676039c8a8994d98f74a0e93fb76b, type: 3}
-  randomSprite: {fileID: 21300000, guid: 13149934185b8be44a818ae0c46259af, type: 3}
+  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
+  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
+  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
+  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
   nextNodes:
   - {fileID: 916506380}
   - {fileID: 456338317}
@@ -9632,7 +9640,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d2b120fa1eba9ac41ae704ca41c415a0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9839,7 +9847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.36037737, b: 0.36037737, a: 1}
+  m_Color: {r: 0.3607843, g: 0.49349302, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9982,7 +9990,7 @@ Transform:
   m_GameObject: {fileID: 2020438294}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13917309, y: -0, z: -0, w: 0.9902681}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.33, z: 0}
   m_LocalScale: {x: 0.86, y: 0.86, z: 0.86}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -10393,11 +10401,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: 0617116399b82fb4ea230c501b71ca6a, type: 2}
   iconImage: {fileID: 2097100037}
-  battleSprite: {fileID: 21300000, guid: d2b120fa1eba9ac41ae704ca41c415a0, type: 3}
-  bossSprite: {fileID: 21300000, guid: c2ae9b8e331fe4f46bb0770235b55018, type: 3}
-  shopSprite: {fileID: 21300000, guid: cb0c17807f9e36d47bf808700f71095d, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: 3b8676039c8a8994d98f74a0e93fb76b, type: 3}
-  randomSprite: {fileID: 21300000, guid: 13149934185b8be44a818ae0c46259af, type: 3}
+  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
+  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
+  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
+  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
   nextNodes:
   - {fileID: 673209304}
   isUnlocked: 0
@@ -10478,7 +10486,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d2b120fa1eba9ac41ae704ca41c415a0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10555,15 +10563,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cbf146118705c0540815372587172262, type: 2}
-  m_sharedMaterial: {fileID: -4962550304603051794, guid: cbf146118705c0540815372587172262, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 84334099c5ecf444f9c1e0c46c6f3ac6, type: 2}
+  m_sharedMaterial: {fileID: -658450551954832704, guid: 84334099c5ecf444f9c1e0c46c6f3ac6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10793,11 +10801,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: 732cd47a7c046cd43a284c5c90bfe859, type: 2}
   iconImage: {fileID: 2142707406}
-  battleSprite: {fileID: 21300000, guid: d2b120fa1eba9ac41ae704ca41c415a0, type: 3}
-  bossSprite: {fileID: 21300000, guid: c2ae9b8e331fe4f46bb0770235b55018, type: 3}
-  shopSprite: {fileID: 21300000, guid: cb0c17807f9e36d47bf808700f71095d, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: 3b8676039c8a8994d98f74a0e93fb76b, type: 3}
-  randomSprite: {fileID: 21300000, guid: 13149934185b8be44a818ae0c46259af, type: 3}
+  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
+  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
+  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
+  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
   nextNodes:
   - {fileID: 2097100035}
   isUnlocked: 0
@@ -10878,7 +10886,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 13149934185b8be44a818ae0c46259af, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

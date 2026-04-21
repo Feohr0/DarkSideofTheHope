@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e008e43994a3204db41b2cf60970c28, type: 3}
   m_Name: Level-1 2
   m_EditorClassIdentifier: Assembly-CSharp::EncounterData
-  enemyName: Mosquito
+  enemyName: "D\xDC\u015EMAN"
   maxHealth: 20
   maxEnergy: 3
+  enemyIndex: 2
   goldReward: 15
   enemyDeck: {fileID: 11400000, guid: 077038cdbd644c344b65d14e5506ea25, type: 2}
   enemyPrefab: {fileID: 1015623338189278458, guid: 96b74c2c4677ec7409662724ee237357, type: 3}

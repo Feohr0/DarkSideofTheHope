@@ -24,6 +24,9 @@ public class TurnManager : MonoBehaviour
     public bool   IsPlayerTurn      => currentActor == player;
     public string CurrentActorName  => currentActor.playerName;
     private EncounterData currentEncounter;
+    
+    public GameObject[] enemySprites;
+    
     public void InitBattle(DeckData playerDeck, EncounterData encounter, int pMaxHP, int pCurrentHP)
     {
         currentEncounter = encounter;
@@ -33,8 +36,15 @@ public class TurnManager : MonoBehaviour
 
         if (encounter.enemyPrefab != null && enemySpawnPoint != null)
         {
-            currentEnemyModel = Instantiate(encounter.enemyPrefab, enemySpawnPoint.position, enemySpawnPoint.rotation);
+         //   currentEnemyModel = Instantiate(encounter.enemyPrefab, enemySpawnPoint.position, enemySpawnPoint.rotation);
         }
+
+        foreach (GameObject e in enemySprites )
+        {
+            e.SetActive(false);
+        }
+        
+        enemySprites[encounter.enemyIndex].gameObject.SetActive(true);
 
         // Oyuncuyu mevcut canıyla yarat
         player = new Player("Oyuncu", pMaxHP, pCurrentHP, 6);

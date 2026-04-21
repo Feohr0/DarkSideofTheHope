@@ -4,9 +4,11 @@ using UnityEngine;
 public class EncounterData : ScriptableObject
 {
     [Header("Düşman Bilgileri")]
-    public string enemyName;
+    public string enemyName = "DÜŞMAN";
     public int maxHealth;
     public int maxEnergy = 3;
+
+    public int enemyIndex;
     
     [Header("Ödüller")]
     public int goldReward; // Bu düşmanı yenince kaç coin gelecek?

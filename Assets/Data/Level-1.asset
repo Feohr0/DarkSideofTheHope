@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e008e43994a3204db41b2cf60970c28, type: 3}
   m_Name: Level-1
   m_EditorClassIdentifier: Assembly-CSharp::EncounterData
-  enemyName: Spider
+  enemyName: "D\xDC\u015EMAN"
   maxHealth: 10
   maxEnergy: 3
+  enemyIndex: 0
   goldReward: 10
   enemyDeck: {fileID: 11400000, guid: 077038cdbd644c344b65d14e5506ea25, type: 2}
   enemyPrefab: {fileID: 7329011354118995176, guid: 33e177f66b6570746a042648d23a0bb9, type: 3}
