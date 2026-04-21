@@ -916,6 +916,14 @@ MonoBehaviour:
   cardArt: {fileID: 1523684589404926103}
   cardBackground: {fileID: 3944344149891398092}
   cardButton: {fileID: 6414452324683534155}
+  randomDamageArts:
+  - {fileID: 21300000, guid: 4acea07b0b83fc24c938dcedb8f55289, type: 3}
+  - {fileID: 21300000, guid: 9e3be869795070141ac8cff7a3866952, type: 3}
+  - {fileID: 21300000, guid: 3f685901de1cc864a9ef53c491ccebf3, type: 3}
+  randomShieldArts:
+  - {fileID: 21300000, guid: 46d6d99b3e054ed419a96659d2b546b5, type: 3}
+  - {fileID: 21300000, guid: c81e6a0987cd7e644a271dc30a0b3c17, type: 3}
+  - {fileID: 21300000, guid: e3839f5c34fe11a47addd75502f9ae35, type: 3}
 --- !u!222 &2847265134339501746
 CanvasRenderer:
   m_ObjectHideFlags: 0

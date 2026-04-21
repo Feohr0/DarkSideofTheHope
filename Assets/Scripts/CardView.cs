@@ -23,6 +23,10 @@ public class CardView : MonoBehaviour
     public Image           cardArt;      // YENİ
     public Image           cardBackground;
     public Button          cardButton;
+    
+    [Header("Random Kart Görselleri (Opsiyonel)")]
+    public Sprite[] randomDamageArts; // saldırı
+    public Sprite[] randomShieldArts; // kalkan
 
     public void Setup(Card card, Action<Card> onClick)
     {
@@ -36,7 +40,10 @@ public class CardView : MonoBehaviour
 
         // Flavor & görsel (null güvenli)
         //if (flavorText != null) flavorText.text = card.flavorText;
-        if (cardArt    != null) cardArt.sprite  = card.art;
+        if (cardArt != null)
+        {
+            cardArt.sprite = PickRandomArtOrDefault(card);
+        }
 
         cardBackground.color = card.effect switch
         {
@@ -48,6 +55,26 @@ public class CardView : MonoBehaviour
 
         cardButton.onClick.RemoveAllListeners();
         cardButton.onClick.AddListener(() => onClickCallback?.Invoke(cardData));
+    }
+    
+    private Sprite PickRandomArtOrDefault(Card card)
+    {
+        if (card == null) return null;
+
+        Sprite[] pool = card.effect switch
+        {
+            Card.EffectType.Damage => randomDamageArts,
+            Card.EffectType.Shield => randomShieldArts,
+            _ => null
+        };
+
+        if (pool != null && pool.Length > 0)
+        {
+            Sprite chosen = pool[UnityEngine.Random.Range(0, pool.Length)];
+            if (chosen != null) return chosen;
+        }
+
+        return card.art;
     }
 
     // Kart oynanabilir mi? (enerji yeterliyse parlat, yetersizse soluklaştır)
