@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Level-1 3
   m_EditorClassIdentifier: Assembly-CSharp::EncounterData
   enemyName: "D\xDC\u015EMAN"
-  maxHealth: 40
+  maxHealth: 30
   maxEnergy: 3
   enemyIndex: 3
   enemyIndexPool: 0400000005000000
   damageBonus: 2
   damageMultiplier: 1
-  goldReward: 20
+  goldReward: 50
   enemyDeck: {fileID: 11400000, guid: 077038cdbd644c344b65d14e5506ea25, type: 2}
   enemyPrefab: {fileID: 1065079196783435212, guid: 39fa073bb50161743a7d1b766ab9a01a, type: 3}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level-1 4
   m_EditorClassIdentifier: Assembly-CSharp::EncounterData
   enemyName: "D\xDC\u015EMAN"
-  maxHealth: 70
+  maxHealth: 50
   maxEnergy: 3
   enemyIndex: 6
   enemyIndexPool: 06000000
