@@ -35,7 +35,7 @@ public class CardView : MonoBehaviour
 
         nameText.text   = card.cardName;
         costText.text   = card.energyCost.ToString();
-        powerText.text  = "GUC: " + card.power.ToString();
+        powerText.text  = "Güç: " + card.power.ToString();
         effectText.text = " ";
 
         // Flavor & görsel (null güvenli)

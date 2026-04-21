@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e008e43994a3204db41b2cf60970c28, type: 3}
   m_Name: Level-1 4
   m_EditorClassIdentifier: Assembly-CSharp::EncounterData
-  enemyName: "D\xDC\u015EMAN"
+  enemyName: "D\xFCsman"
   maxHealth: 50
   maxEnergy: 3
   enemyIndex: 6

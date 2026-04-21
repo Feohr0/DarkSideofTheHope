@@ -26,7 +26,7 @@ public class UpgradeCardSlot : MonoBehaviour
         data.currentLevel--; // Değeri hemen geri alıyoruz ki asıl veriyi bozmayalım
 
         statsText.text = $"Güç: {currentPower} ➔ {nextPower}\nEnerji: {currentEnergy} ➔ {nextEnergy}";
-        priceText.text = $"💰 {goldCost}";
+        priceText.text = $"{goldCost}";
 
         // Butona tıklama olayını bağla
         upgradeButton.onClick.RemoveAllListeners();

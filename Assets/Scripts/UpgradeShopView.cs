@@ -29,7 +29,7 @@ public class UpgradeShopView : MonoBehaviour
 
     private void RefreshGoldText()
     {
-        if (goldText != null) goldText.text = $"💰 {gameManager.playerGold}";
+        if (goldText != null) goldText.text = $"RUH PUANI: {gameManager.playerGold}";
     }
 
     // --- 1. BUTON: Saldırı Hasarı +1 ---

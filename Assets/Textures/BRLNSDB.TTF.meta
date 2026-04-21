@@ -11,7 +11,7 @@ TrueTypeFontImporter:
   fontNames:
   - Berlin Sans FB Demi
   fallbackFontReferences: []
-  customCharacters: 
+  customCharacters: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz\xC7\xE7\u011E\u011F\u0130\u0131\xD6\xF6\u015E\u015F\xDC\xFC0123456789.,!?;:'\"()-@#%&"
   fontRenderingMode: 0
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0

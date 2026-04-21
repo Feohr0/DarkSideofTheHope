@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class EncounterData : ScriptableObject
 {
     [Header("Düşman Bilgileri")]
-    public string enemyName = "DÜŞMAN";
+    public string enemyName = "Düsman";
     public int maxHealth;
     public int maxEnergy = 3;
 
