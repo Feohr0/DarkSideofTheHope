@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     
     [Header("Harita İlerlemesi")]
     public MapNode currentNode; // O an bulunduğumuz düğüm
+
+    [Header("Harita Mesajı (İksir vb.)")]
+    public MapMessageView mapMessageView;
     
     public void AddGold(int amount)
     {
@@ -41,17 +44,49 @@ public class GameManager : MonoBehaviour
     // Potion Shop Fonksiyonu
     public bool TryBuyHealth(int cost, int healAmount)
     {
+        int beforeGold = playerGold;
+        int beforeHP = playerCurrentHP;
+
         if (playerGold >= cost)
         {
             playerGold -= cost;
             playerCurrentHP = Mathf.Min(playerCurrentHP + healAmount, playerMaxHP);
             Debug.Log($"İksir alındı! Kalan Altın: {playerGold} | Yeni HP: {playerCurrentHP}");
             RefreshGoldText();
+
+            int healed = playerCurrentHP - beforeHP;
+            if (healed <= 0)
+            {
+                ShowMapMessage($"Canın zaten full: {playerCurrentHP}/{playerMaxHP} | Ruh Puanı: {playerGold}");
+            }
+            else
+            {
+                ShowMapMessage($"+{healed} can kazandın ({playerCurrentHP}/{playerMaxHP}) | Ruh Puanı: {playerGold}");
+            }
             return true;
         }
         
         Debug.Log("Yetersiz altın!");
+        ShowMapMessage($"Yetersiz Ruh Puanı: {beforeGold}/{cost} | Can: {beforeHP}/{playerMaxHP}");
         return false;
+    }
+
+    private void ShowMapMessage(string message)
+    {
+        if (mapMessageView != null)
+        {
+            mapMessageView.Show(message);
+            return;
+        }
+
+        UIManager ui = FindObjectOfType<UIManager>();
+        if (ui != null && ui.hudView != null)
+        {
+            ui.hudView.ShowLog(message);
+            return;
+        }
+
+        Debug.Log(message);
     }
     
     void Start()
