@@ -133,8 +133,21 @@ public class TurnManager : MonoBehaviour
 
         bool played = currentActor.PlayCard(card);
         if (!played) return;
-
-        battleSystem.ApplyCard(card, currentActor, currentTarget);
+        
+        if (currentActor == enemy && currentEncounter != null)
+        {
+            battleSystem.ApplyCard(
+                card,
+                currentActor,
+                currentTarget,
+                currentEncounter.damageMultiplier,
+                currentEncounter.damageBonus
+            );
+        }
+        else
+        {
+            battleSystem.ApplyCard(card, currentActor, currentTarget);
+        }
 
         if (!currentTarget.IsAlive)
         {

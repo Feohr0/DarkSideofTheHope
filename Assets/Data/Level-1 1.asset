@@ -16,6 +16,8 @@ MonoBehaviour:
   maxHealth: 15
   maxEnergy: 3
   enemyIndex: 1
+  damageBonus: 1
+  damageMultiplier: 1
   goldReward: 15
   enemyDeck: {fileID: 11400000, guid: 077038cdbd644c344b65d14e5506ea25, type: 2}
   enemyPrefab: {fileID: 7691812503207207952, guid: 7b9a1acbc39b8714085154b356050588, type: 3}

@@ -10,6 +10,13 @@ public class EncounterData : ScriptableObject
 
     public int enemyIndex;
     
+    [Header("Düşman Hasarı (Kart Hasarına Uygulanır)")]
+    [Tooltip("Düşmanın DAMAGE kartlarından gelen hasara eklenecek sabit değer.")]
+    public int damageBonus = 0;
+    
+    [Tooltip("Düşmanın DAMAGE kartlarından gelen hasara uygulanacak çarpan.")]
+    public float damageMultiplier = 1f;
+    
     [Header("Ödüller")]
     public int goldReward; // Bu düşmanı yenince kaç coin gelecek?
     

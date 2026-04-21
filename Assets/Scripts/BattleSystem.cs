@@ -3,14 +3,15 @@ using UnityEngine;
 public class BattleSystem
 {
     // Bir oyuncunun kartını rakibe (veya kendine) uygulaması
-    public void ApplyCard(Card card, Player caster, Player target)
+    public void ApplyCard(Card card, Player caster, Player target, float damageMultiplier = 1f, int damageBonus = 0)
     {
         Debug.Log($"{caster.playerName} → {card} kullanıyor...");
 
         switch (card.effect)
         {
             case Card.EffectType.Damage:
-                target.TakeDamage(card.power);
+                int damage = Mathf.RoundToInt(card.power * damageMultiplier) + damageBonus;
+                target.TakeDamage(damage);
                 break;
 
             case Card.EffectType.Shield:
