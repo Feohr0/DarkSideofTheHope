@@ -7459,7 +7459,7 @@ GameObject:
   - component: {fileID: 1385043197}
   - component: {fileID: 1385043198}
   m_Layer: 0
-  m_Name: --Combat Manager--
+  m_Name: --------------------Combat Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7496,13 +7496,13 @@ MonoBehaviour:
   enemyDeckData: {fileID: 11400000, guid: 077038cdbd644c344b65d14e5506ea25, type: 2}
   enemySpawnPoint: {fileID: 1740235812}
   enemySprites:
-  - {fileID: 760463641}
-  - {fileID: 1804353738}
   - {fileID: 1154470906}
   - {fileID: 1912020189}
+  - {fileID: 760463641}
   - {fileID: 875692811}
   - {fileID: 2020438294}
   - {fileID: 358961741}
+  - {fileID: 1804353738}
 --- !u!114 &1385043198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11400,12 +11400,12 @@ SceneRoots:
   m_Roots:
   - {fileID: 963194228}
   - {fileID: 705507995}
-  - {fileID: 1385043196}
   - {fileID: 1218736597}
   - {fileID: 1291698434}
   - {fileID: 2106667228}
   - {fileID: 1545606112}
   - {fileID: 1756157288}
+  - {fileID: 1385043196}
   - {fileID: 596105707}
   - {fileID: 404540590}
   - {fileID: 4042979429352683267}

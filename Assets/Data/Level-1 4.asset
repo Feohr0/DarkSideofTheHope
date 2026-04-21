@@ -16,6 +16,7 @@ MonoBehaviour:
   maxHealth: 70
   maxEnergy: 3
   enemyIndex: 6
+  enemyIndexPool: 06000000
   damageBonus: 3
   damageMultiplier: 1
   goldReward: 100

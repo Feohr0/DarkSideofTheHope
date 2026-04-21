@@ -43,8 +43,13 @@ public class TurnManager : MonoBehaviour
         {
             e.SetActive(false);
         }
-        
-        enemySprites[encounter.enemyIndex].gameObject.SetActive(true);
+
+        int pickedIndex = encounter != null ? encounter.PickEnemyIndex() : 0;
+        if (enemySprites != null && enemySprites.Length > 0)
+        {
+            pickedIndex = Mathf.Clamp(pickedIndex, 0, enemySprites.Length - 1);
+            enemySprites[pickedIndex].gameObject.SetActive(true);
+        }
 
         // Oyuncuyu mevcut canıyla yarat
         player = new Player("Oyuncu", pMaxHP, pCurrentHP, 6);
