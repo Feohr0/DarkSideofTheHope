@@ -172,7 +172,7 @@ public class UpgradeShopView : MonoBehaviour
     {
         if (goldText != null && gameManager != null)
         {
-            goldText.text = $"RUH PUANI: {gameManager.playerGold}";
+            goldText.text = gameManager.playerGold.ToString();
         }
     }
 

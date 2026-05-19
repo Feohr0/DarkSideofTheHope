@@ -30,7 +30,7 @@ public class HUDView : MonoBehaviour
     // UIManager.cs içindeki Refresh fonksiyonunda bunu çağırabilirsin
     public void UpdateGold(int currentGold)
     {
-        if (goldText != null) goldText.text = $"RUH PUANI: {currentGold}";
+        if (goldText != null) goldText.text = currentGold.ToString();
     }
     
     public void Init(int pMaxHP, int eMaxHP)

@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     {
         if (goldText != null)
         {
-            goldText.text = $"💰 {playerGold}";
+            goldText.text = playerGold.ToString();
         }
     }
 
