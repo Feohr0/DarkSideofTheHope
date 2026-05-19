@@ -47,11 +47,11 @@ public class CardView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         powerText.text  = "Güç: " + card.power.ToString();
         effectText.text = " ";
 
-        // Flavor & görsel (null güvenli)
-        //if (flavorText != null) flavorText.text = card.flavorText;
+        // Görseli doğrudan CardData'dan al — her kart kendi sabit görselini gösterir
         if (cardArt != null)
         {
-            cardArt.sprite = PickRandomArtOrDefault(card);
+            cardArt.sprite  = card.art;           // card.art → data.cardArt
+            cardArt.enabled = card.art != null;
         }
 
         cardBackground.color = card.effect switch
