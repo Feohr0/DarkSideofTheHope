@@ -1,51 +1,58 @@
-using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [Header("Paneller (Canvas)")]
-    public GameObject mapCanvas;     // Harita UI'ı
-    public GameObject battleCanvas;  // Savaş HUD ve El UI'ı
-    
+    public GameObject mapCanvas;
+    public GameObject battleCanvas;
+
     [Header("Arkaplan")]
     public SpriteRenderer backgroundRenderer;
-    public Sprite[] backgroundSprites; // 0: Map, 1: Normal, 2: Boss
+    public Sprite[] backgroundSprites;
 
     [Header("Bağımlılıklar")]
     public TurnManager turnManager;
-    public DeckData playerMainDeck;  // Oyuncunun asıl destesi
-    
+    public DeckData playerMainDeck;
+
     [Header("Kalıcı Oyuncu Verileri")]
     public int playerMaxHP = 30;
     public int playerCurrentHP;
-    
+
     [Header("Ekonomi")]
     public int playerGold = 0;
-
     public TextMeshProUGUI goldText;
-    
+
     public List<Card> playerCurrentDeck = new List<Card>();
-    
+
     [Header("Harita İlerlemesi")]
-    public MapNode currentNode; // O an bulunduğumuz düğüm
+    public MapNode currentNode;
 
     [Header("Harita Mesajı (İksir vb.)")]
     public MapMessageView mapMessageView;
-    
+
     public void AddGold(int amount)
     {
         playerGold += amount;
+        RefreshGoldText();
         Debug.Log("Coin Kazandın! Toplam: " + playerGold);
     }
-    
+
+    public void NotifyGoldChanged()
+    {
+        RefreshGoldText();
+    }
+
     private void RefreshGoldText()
     {
-        if (goldText != null) goldText.text = $"💰 {playerGold}";
+        if (goldText != null)
+        {
+            goldText.text = $"💰 {playerGold}";
+        }
     }
-    
-    // Potion Shop Fonksiyonu
+
     public bool TryBuyHealth(int cost, int healAmount)
     {
         int beforeGold = playerGold;
@@ -69,10 +76,44 @@ public class GameManager : MonoBehaviour
             }
             return true;
         }
-        
+
         Debug.Log("Yetersiz altın!");
         ShowMapMessage($"Yetersiz Ruh Puanı: {beforeGold}/{cost} | Can: {beforeHP}/{playerMaxHP}");
         return false;
+    }
+
+    public bool TryUpgradeCard(CardData cardType, int cost)
+    {
+        if (cardType == null)
+        {
+            return false;
+        }
+
+        if (playerGold < cost)
+        {
+            ShowMapMessage($"Yetersiz Ruh Puanı: {playerGold}/{cost}");
+            return false;
+        }
+
+        if (!cardType.CanUpgrade())
+        {
+            ShowMapMessage($"{cardType.cardName} zaten maksimum seviyede.");
+            return false;
+        }
+
+        playerGold -= cost;
+        cardType.Upgrade();
+        RefreshGoldText();
+
+        FindObjectOfType<UIManager>()?.Refresh();
+        ShowMapMessage($"{cardType.cardName} seviye {cardType.currentLevel} oldu. Kalan Ruh Puanı: {playerGold}");
+        Debug.Log($"{cardType.cardName} türü Seviye {cardType.currentLevel}'e yükseltildi!");
+        return true;
+    }
+
+    public void UpgradeCardType(CardData cardType, int cost)
+    {
+        TryUpgradeCard(cardType, cost);
     }
 
     private void ShowMapMessage(string message)
@@ -92,18 +133,17 @@ public class GameManager : MonoBehaviour
 
         Debug.Log(message);
     }
-    
-    void Start()
+
+    private void Start()
     {
         playerCurrentHP = playerMaxHP;
-        
-        // Oyun ilk başladığında temel destedeki kartları (CardData), güncel destemize (Card) çevirip ekliyoruz
+
         foreach (CardData cardData in playerMainDeck.cards)
         {
             playerCurrentDeck.Add(cardData.ToCard());
         }
-        
-        // Oyun başladığında Haritayı aç, Savaşı gizle
+
+        RefreshGoldText();
         ShowMap();
     }
 
@@ -113,13 +153,12 @@ public class GameManager : MonoBehaviour
         mapCanvas.SetActive(true);
         SetBackgroundIndex(0);
     }
-    
+
     public void StartEncounter(EncounterData encounterData)
     {
-        // 1. Haritayı kapat, Savaşı aç
         mapCanvas.SetActive(false);
         battleCanvas.SetActive(true);
-        
+
         bool isBoss = currentNode != null && currentNode.isBoss;
         SetBackgroundIndex(isBoss ? 2 : 1);
 
@@ -128,12 +167,10 @@ public class GameManager : MonoBehaviour
 
     public void EndBattle(bool playerWon)
     {
-        // Savaş biter bitmez oyuncunun kalan canını kaydet
         playerCurrentHP = turnManager.player.health;
 
         turnManager.ClearBattlefield();
 
-        // Kaybettiysek: run bitti → progress sıfırla ve menüye dön
         if (!playerWon)
         {
             ResetProgress();
@@ -141,7 +178,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        // Kazandıysak: sadece boss düğümünden sonra run biter
         if (currentNode != null && currentNode.isBoss)
         {
             ResetProgress();
@@ -149,7 +185,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        // Normal savaş kazanıldı → haritaya dön, ilerlemeyi aç
         ShowMap();
         CompleteCurrentNode();
     }
@@ -167,14 +202,13 @@ public class GameManager : MonoBehaviour
     private void ResetProgress()
     {
         Time.timeScale = 1f;
-        
+
         playerGold = 0;
         RefreshGoldText();
-        
-        playerCurrentHP = playerMaxHP;
 
+        playerCurrentHP = playerMaxHP;
         currentNode = null;
-        
+
         playerCurrentDeck.Clear();
         if (playerMainDeck != null && playerMainDeck.cards != null)
         {
@@ -184,23 +218,9 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    
-    public void UpgradeCardType(CardData cardType, int cost)
-    {
-        if (playerGold >= cost && cardType.currentLevel < 3)
-        {
-            playerGold -= cost;
-            cardType.Upgrade();
-        
-            // UI'ı güncellemek için Refresh çağırılabilir
-            FindObjectOfType<UIManager>()?.Refresh();
-            Debug.Log($"{cardType.cardName} türü Seviye {cardType.currentLevel}'e yükseltildi!");
-        }
-    }
-    
+
     public void CompleteCurrentNode()
     {
-        // 1. Önce haritadaki TÜM düğümleri kilitliyoruz
         MapNode[] allNodes = FindObjectsOfType<MapNode>();
         foreach (MapNode node in allNodes)
         {
@@ -208,7 +228,6 @@ public class GameManager : MonoBehaviour
             node.nodeButton.interactable = false;
         }
 
-        // 2. Sadece bulunduğumuz düğümün (currentNode) bağlı olduğu düğümleri açıyoruz!
         if (currentNode != null)
         {
             foreach (MapNode next in currentNode.nextNodes)
@@ -217,6 +236,4 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    
-    
 }
