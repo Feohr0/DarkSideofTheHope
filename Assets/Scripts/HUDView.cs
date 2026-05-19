@@ -15,6 +15,8 @@ public class HUDView : MonoBehaviour
     public Slider            enemyHPBar;
     public TextMeshProUGUI   enemyHPText;
     public TextMeshProUGUI   enemyShieldText;
+    [Tooltip("Düşmanın son hamlesini gösteren text (\"Düşman 5 hasar verdi\" vb.)")]
+    public TextMeshProUGUI   enemyActionText;
 
     [Header("Genel")]
     public TextMeshProUGUI   turnText;
@@ -68,4 +70,18 @@ public class HUDView : MonoBehaviour
 
     public void ShowLog(string message)
         => logText.text = message;
+
+    /// <summary>Düşmanın oynadığı kartın açıklamasını ekrana yaz.</summary>
+    public void ShowEnemyAction(string message)
+    {
+        if (enemyActionText != null)
+            enemyActionText.text = message;
+    }
+
+    /// <summary>Düşman hamle text'ini temizle (oyuncu turu başlıyınca vb.).</summary>
+    public void ClearEnemyAction()
+    {
+        if (enemyActionText != null)
+            enemyActionText.text = string.Empty;
+    }
 }

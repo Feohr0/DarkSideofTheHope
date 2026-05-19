@@ -129,6 +129,14 @@ public class TurnManager : MonoBehaviour
     
         FindObjectOfType<UIManager>()?.Refresh();
 
+        // Oyuncunun turu başlıyor → düşman hamle metnini temizle
+        if (currentActor == player)
+        {
+            UIManager ui = FindObjectOfType<UIManager>();
+            if (ui != null && ui.hudView != null)
+                ui.hudView.ClearEnemyAction();
+        }
+
         if (currentActor == enemy)
             StartCoroutine(RunEnemyTurn());
     }
@@ -153,15 +161,19 @@ public class TurnManager : MonoBehaviour
 
             if (gameOver) yield break;
 
-            // Enerji bitti → döngüden çık (EndTurn zaten çağrıldı)
-            if (enemy.currentEnergy == 0) yield break;
+            // Son hamle mesajının okunması için bekle
+            yield return new WaitForSeconds(1.5f);
 
-            yield return new WaitForSeconds(0.8f);   // kartlar arası bekleme
+            // Enerji bitti → mesaj okundu, turu bitir
+            if (enemy.currentEnergy == 0) break;
         }
 
-        // Hâlâ enerji varsa turu manuel bitir
+        // Turu bitirmeden önce son mesajın ekranda kalması için bekle
         if (!gameOver && currentActor == enemy)
+        {
+            yield return new WaitForSeconds(1.5f);
             EndTurn();
+        }
     }
 
     // Dışarıdan (UI veya AI) çağrılır
@@ -184,6 +196,9 @@ public class TurnManager : MonoBehaviour
                 currentEncounter.damageMultiplier,
                 currentEncounter.damageBonus
             );
+
+            // Düşman hamle metnini göster
+            ShowEnemyActionMessage(card, currentEncounter.damageMultiplier, currentEncounter.damageBonus);
         }
         else
         {
@@ -199,11 +214,15 @@ public class TurnManager : MonoBehaviour
                 FindObjectOfType<GameManager>().AddGold(currentEncounter.goldReward);
             }
         
-            FindObjectOfType<GameManager>().EndBattle(true);
+            // Düşman öldüyse oyuncu kazandı (true), oyuncu öldüyse kaybetti (false)
+            bool playerWon = (currentTarget == enemy);
+            FindObjectOfType<GameManager>().EndBattle(playerWon);
             return;
         }
 
-        if (currentActor.currentEnergy == 0)
+        // Enerji bitti → sadece oyuncunun turuysa burada bitir.
+        // Düşman sırasında coroutine hallediyor (bekleme süresi var).
+        if (currentActor.currentEnergy == 0 && currentActor == player)
         {
             Debug.Log("Enerji tükendi, tur geçiyor...");
             EndTurn();
@@ -223,6 +242,27 @@ public class TurnManager : MonoBehaviour
                 if (shieldSfx != null) sfxSource.PlayOneShot(shieldSfx);
                 break;
         }
+    }
+
+    /// <summary>Düşmanın oynadığı kartı Türkçe mesaj olarak HUD'a gönderir.</summary>
+    private void ShowEnemyActionMessage(Card card, float damageMultiplier = 1f, int damageBonus = 0)
+    {
+        if (card == null) return;
+
+        string message = card.effect switch
+        {
+            Card.EffectType.Damage =>
+                $"Düşman {Mathf.RoundToInt(card.power * damageMultiplier) + damageBonus} hasar verdi!",
+            Card.EffectType.Shield =>
+                $"Düşman {card.power} kalkan edindi!",
+            Card.EffectType.Heal =>
+                $"Düşman {card.power} can yeniledi!",
+            _ => $"Düşman {card.cardName} kartını oynadı."
+        };
+
+        UIManager ui = FindObjectOfType<UIManager>();
+        if (ui != null && ui.hudView != null)
+            ui.hudView.ShowEnemyAction(message);
     }
 
    
