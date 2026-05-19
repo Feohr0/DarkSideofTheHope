@@ -1,22 +1,19 @@
-using System;
 using UnityEngine;
 using System.Collections;
-using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class VisualFXtest : MonoBehaviour
 {
-    [SerializeField] private float flashDuration = 0.6f;
-    [SerializeField] private int flashCount = 3;
+    [SerializeField] private float flashDuration = 0.32f;
+    [SerializeField] private int flashCount = 1;
 
     private SpriteRenderer sr;
     private Material flashMat;
+    private static readonly int FlashAmountId = Shader.PropertyToID("_FlashAmount");
 
     private void Awake()
     {
-        sr = GetComponent<SpriteRenderer>();
-        // Instance oluştur — diğer objeleri etkilemesin
-        flashMat = new Material(Shader.Find("Custom/FlashWhite"));
-        sr.material = flashMat;
+        EnsureInitialized();
     }
 
     private void Update()
@@ -29,8 +26,35 @@ public class VisualFXtest : MonoBehaviour
 
     public void TriggerFlash()
     {
+        EnsureInitialized();
+        if (flashMat == null) return;
+
         StopAllCoroutines();
         StartCoroutine(FlashRoutine());
+    }
+
+    private void EnsureInitialized()
+    {
+        if (sr == null)
+        {
+            sr = GetComponent<SpriteRenderer>();
+        }
+
+        if (flashMat != null || sr == null)
+        {
+            return;
+        }
+
+        Shader flashShader = Shader.Find("Custom/FlashWhite");
+        if (flashShader == null)
+        {
+            Debug.LogWarning("Custom/FlashWhite shader bulunamadı, damage flash çalışmayacak.", this);
+            return;
+        }
+
+        // Instance oluştur; sahnedeki diğer sprite'ları etkilemesin.
+        flashMat = new Material(flashShader);
+        sr.material = flashMat;
     }
 
     private IEnumerator FlashRoutine()
@@ -39,9 +63,9 @@ public class VisualFXtest : MonoBehaviour
 
         for (int i = 0; i < flashCount; i++)
         {
-            flashMat.SetFloat("_FlashAmount", 1f);
+            flashMat.SetFloat(FlashAmountId, 1f);
             yield return new WaitForSeconds(step * 0.5f);
-            flashMat.SetFloat("_FlashAmount", 0f);
+            flashMat.SetFloat(FlashAmountId, 0f);
             yield return new WaitForSeconds(step * 0.5f);
         }
     }

@@ -1,8 +1,11 @@
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Player
 {
+    public event Action<int, int> Damaged;
+
     public string playerName;
     public int    maxHealth;      // YENİ: Artık her karakter kendi max canını biliyor
     public int    health;         // Anlık can
@@ -65,11 +68,17 @@ public class Player
     // Hasar alırken kalkanı önce tüket
     public void TakeDamage(int amount)
     {
+        int incomingDamage = amount;
+        int previousHealth = health;
+
         int absorbed = Mathf.Min(shield, amount);
         shield  -= absorbed;
         amount  -= absorbed;
         health  -= amount;
         health   = Mathf.Max(health, 0);   // negatife düşmesin
+
+        int healthLost = previousHealth - health;
+        Damaged?.Invoke(incomingDamage, healthLost);
 
         Debug.Log($"{playerName} → {absorbed} kalkanla engellendi, " +
                   $"{amount} hasar aldı | HP:{health}  Kalkan:{shield}");

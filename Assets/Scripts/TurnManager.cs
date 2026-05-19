@@ -25,6 +25,7 @@ public class TurnManager : MonoBehaviour
     [Header("3D Çevre")]
     public Transform enemySpawnPoint;       // Sahnedeki EnemySpawnPoint'i buraya sürükle
     private GameObject currentEnemyModel;
+    private VisualFXtest activeEnemyFlash;
     
     public bool   IsPlayerTurn      => currentActor == player;
     public string CurrentActorName  => currentActor.playerName;
@@ -34,6 +35,12 @@ public class TurnManager : MonoBehaviour
     
     public void InitBattle(DeckData playerDeck, EncounterData encounter, int pMaxHP, int pCurrentHP)
     {
+        if (enemy != null)
+        {
+            enemy.Damaged -= OnEnemyDamaged;
+        }
+
+        activeEnemyFlash = null;
         currentEncounter = encounter;
         gameOver = false;
         StopAllCoroutines();
@@ -53,12 +60,20 @@ public class TurnManager : MonoBehaviour
         if (enemySprites != null && enemySprites.Length > 0)
         {
             pickedIndex = Mathf.Clamp(pickedIndex, 0, enemySprites.Length - 1);
-            enemySprites[pickedIndex].gameObject.SetActive(true);
+            GameObject activeEnemySprite = enemySprites[pickedIndex];
+            activeEnemySprite.gameObject.SetActive(true);
+            activeEnemyFlash = activeEnemySprite.GetComponent<VisualFXtest>();
+
+            if (activeEnemyFlash == null)
+            {
+                activeEnemyFlash = activeEnemySprite.AddComponent<VisualFXtest>();
+            }
         }
 
         // Oyuncuyu mevcut canıyla yarat
         player = new Player("Oyuncu", pMaxHP, pCurrentHP, 6);
         enemy  = new Player(encounter.enemyName, encounter.maxHealth, encounter.maxHealth, encounter.maxEnergy);
+        enemy.Damaged += OnEnemyDamaged;
 
         player.deck = playerDeck.BuildShuffledDeck();
         enemy.deck  = encounter.enemyDeck.BuildShuffledDeck();
@@ -71,9 +86,22 @@ public class TurnManager : MonoBehaviour
     // Savaş bitince veya haritaya dönünce modeli temizlemek için
     public void ClearBattlefield()
     {
+        if (enemy != null)
+        {
+            enemy.Damaged -= OnEnemyDamaged;
+        }
+
         if (currentEnemyModel != null)
         {
             Destroy(currentEnemyModel);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (enemy != null)
+        {
+            enemy.Damaged -= OnEnemyDamaged;
         }
     }
 
@@ -204,5 +232,11 @@ public class TurnManager : MonoBehaviour
         Debug.Log($"{currentActor.playerName} turu bitirdi.\n");
         (currentActor, currentTarget) = (currentTarget, currentActor);
         BeginTurn();
+    }
+
+    private void OnEnemyDamaged(int incomingDamage, int healthLost)
+    {
+        if (incomingDamage <= 0 || healthLost <= 0 || activeEnemyFlash == null) return;
+        activeEnemyFlash.TriggerFlash();
     }
 }
