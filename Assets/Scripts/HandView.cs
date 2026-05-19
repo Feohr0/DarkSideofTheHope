@@ -1,13 +1,22 @@
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 // Oyuncunun elindeki kartları UI'a yansıtır
 public class HandView : MonoBehaviour
 {
     public GameObject  cardPrefab;     // CardView prefab'ı
     public Transform   handContainer;  // Horizontal Layout Group'un içi
+    public GameObject  hoverInfoRoot;
+    public TextMeshProUGUI hoverInfoText;
 
     private List<GameObject> spawnedCards = new List<GameObject>();
+
+    private void Awake()
+    {
+        if (hoverInfoRoot != null)
+            hoverInfoRoot.SetActive(false);
+    }
 
     // Eli sıfırdan çiz
     public void RenderHand(List<Card> hand, int currentEnergy,
@@ -21,6 +30,7 @@ public class HandView : MonoBehaviour
             CardView   view = go.GetComponent<CardView>();
 
             view.Setup(card, onCardClicked);
+            view.SetHoverTooltip(hoverInfoRoot, hoverInfoText);
             view.SetInteractable(card.energyCost <= currentEnergy);
 
             spawnedCards.Add(go);
@@ -39,6 +49,9 @@ public class HandView : MonoBehaviour
 
     private void ClearHand()
     {
+        if (hoverInfoRoot != null)
+            hoverInfoRoot.SetActive(false);
+
         foreach (GameObject go in spawnedCards)
             Destroy(go);
         spawnedCards.Clear();

@@ -8,6 +8,7 @@ public class CardData : ScriptableObject
     public string cardName;
     public Card.EffectType effect;
     public Sprite cardArt;
+    [TextArea(2, 5)] public string hoverDescription;
 
     [Header("Geliştirme Seviyesi (0-3)")]
     public int currentLevel = 0;

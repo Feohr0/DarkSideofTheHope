@@ -15,6 +15,7 @@ MonoBehaviour:
   cardName: Attack
   effect: 0
   cardArt: {fileID: 21300000, guid: 61bcb9cdda37ef342b40f0cc3fbb8450, type: 3}
-  currentLevel: 0
+  hoverDescription: "D\xDC\u015EMANA HASAR VER\u0130R"
+  currentLevel: 1
   powerLevels: 03000000040000000500000006000000
   energyLevels: 02000000010000000000000000000000

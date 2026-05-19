@@ -15,6 +15,7 @@ MonoBehaviour:
   cardName: Shield
   effect: 1
   cardArt: {fileID: 21300000, guid: 818e4ccbfe494c74785d8935e65c120b, type: 3}
-  currentLevel: 0
+  hoverDescription: SALDIRIDAN KORUR
+  currentLevel: 1
   powerLevels: 01000000020000000300000004000000
   energyLevels: 05000000040000000300000002000000
