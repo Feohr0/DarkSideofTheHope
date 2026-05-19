@@ -5342,7 +5342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MapNode
   type: 0
   isBoss: 0
-  encounter: {fileID: 11400000, guid: 0617116399b82fb4ea230c501b71ca6a, type: 2}
+  encounter: {fileID: 11400000, guid: 1a72c2c7d7e594bbc878d6f940e0cbcb, type: 2}
   iconImage: {fileID: 596311998}
   battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
   bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
@@ -5774,7 +5774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MapNode
   type: 0
   isBoss: 0
-  encounter: {fileID: 11400000, guid: 0617116399b82fb4ea230c501b71ca6a, type: 2}
+  encounter: {fileID: 11400000, guid: 1a72c2c7d7e594bbc878d6f940e0cbcb, type: 2}
   iconImage: {fileID: 640493882}
   battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
   bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
@@ -6330,7 +6330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MapNode
   type: 0
   isBoss: 0
-  encounter: {fileID: 11400000, guid: 732cd47a7c046cd43a284c5c90bfe859, type: 2}
+  encounter: {fileID: 11400000, guid: 04af72bda9c2948c0bcf9a59a899d0c0, type: 2}
   iconImage: {fileID: 684910667}
   battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
   bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
@@ -13207,6 +13207,10 @@ MonoBehaviour:
   - {fileID: 2020438294}
   - {fileID: 358961741}
   - {fileID: 1804353738}
+  - {fileID: 1597108766}
+  - {fileID: 1281882653}
+  - {fileID: 480515456}
+  - {fileID: 865216662}
 --- !u!114 &1385043198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15156,7 +15160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MapNode
   type: 0
   isBoss: 0
-  encounter: {fileID: 11400000, guid: b850a8425fda9c84784419908a271bf7, type: 2}
+  encounter: {fileID: 11400000, guid: 04af72bda9c2948c0bcf9a59a899d0c0, type: 2}
   iconImage: {fileID: 1744376085}
   battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
   bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
@@ -15317,9 +15321,9 @@ MonoBehaviour:
   - mapBg: {fileID: 21300000, guid: 7e30004e2657d44d190ce8b4d4dc678f, type: 3}
     battleBg: {fileID: 21300000, guid: e872dbcfc9d7d4fc68ebe94e6642b48e, type: 3}
     bossBg: {fileID: 21300000, guid: d8cb1756d156b43f9bb24fb41dbf520e, type: 3}
-  - mapBg: {fileID: 21300000, guid: 2fcf7ea40a3c206478e95582b33c8613, type: 3}
-    battleBg: {fileID: 21300000, guid: 2fcf7ea40a3c206478e95582b33c8613, type: 3}
-    bossBg: {fileID: 21300000, guid: 2fcf7ea40a3c206478e95582b33c8613, type: 3}
+  - mapBg: {fileID: 21300000, guid: daa6a510da3a744d680911c3ef420a00, type: 3}
+    battleBg: {fileID: 21300000, guid: daa6a510da3a744d680911c3ef420a00, type: 3}
+    bossBg: {fileID: 21300000, guid: daa6a510da3a744d680911c3ef420a00, type: 3}
   - mapBg: {fileID: 21300000, guid: 93af2cbfce171ad468e5b45d7877712f, type: 3}
     battleBg: {fileID: 21300000, guid: 93af2cbfce171ad468e5b45d7877712f, type: 3}
     bossBg: {fileID: 21300000, guid: 93af2cbfce171ad468e5b45d7877712f, type: 3}
