@@ -6,12 +6,27 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [Header("Paneller (Canvas)")]
-    public GameObject mapCanvas;
+    [Tooltip("3 world'ün harita canvas'ları — sırasıyla World 1, 2, 3")]
+    public GameObject[] worldMapCanvases;   // Her world'ün içindeki level seçme canvas'ı
+    public GameObject mapCanvas;             // Ana level seçme sahne canvas'ı (tüm world'lerin kabı)
     public GameObject battleCanvas;
 
     [Header("Arkaplan")]
     public SpriteRenderer backgroundRenderer;
-    public Sprite[] backgroundSprites;
+
+    [System.Serializable]
+    public class WorldBackgroundSet
+    {
+        [Tooltip("Harita ekranındaki arkaplan")]
+        public Sprite mapBg;
+        [Tooltip("Normal savaş arkaplanı")]
+        public Sprite battleBg;
+        [Tooltip("Boss savaşı arkaplanı")]
+        public Sprite bossBg;
+    }
+
+    [Tooltip("Her world için ayrı arkaplan seti (sırasıyla World 1, 2, 3)")]
+    public WorldBackgroundSet[] worldBackgrounds;
 
     [Header("Bağımlılıklar")]
     public TurnManager turnManager;
@@ -29,6 +44,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Harita İlerlemesi")]
     public MapNode currentNode;
+
+    /// <summary>Şu an hangi world'deyiz (0 = World 1, 1 = World 2, 2 = World 3)</summary>
+    [HideInInspector] public int currentWorldIndex = 0;
 
     [Header("Harita Mesajı (İksir vb.)")]
     public MapMessageView mapMessageView;
@@ -147,16 +165,44 @@ public class GameManager : MonoBehaviour
         ShowMap();
     }
 
+    // --------------- Harita Yönetimi ---------------
+
+    /// <summary>Ana map canvas'ı ve tüm world canvas'larını kapat.</summary>
+    public void HideAllWorldMaps()
+    {
+        // Ana level seçme canvas'nı kapat
+        if (mapCanvas != null) mapCanvas.SetActive(false);
+
+        // World'e özgü canvas'ları kapat
+        if (worldMapCanvases == null) return;
+        foreach (GameObject canvas in worldMapCanvases)
+            if (canvas != null) canvas.SetActive(false);
+    }
+
+    /// <summary>Mevcut world'e ait harita canvas'nı aç, battle'u kapat.</summary>
     public void ShowMap()
     {
         battleCanvas.SetActive(false);
-        mapCanvas.SetActive(true);
+        HideAllWorldMaps();
+
+        // Ana level seçme canvas'nı aç
+        if (mapCanvas != null) mapCanvas.SetActive(true);
+
+        // Aktif world'ün canvas'ını aç
+        if (worldMapCanvases != null &&
+            currentWorldIndex >= 0 &&
+            currentWorldIndex < worldMapCanvases.Length &&
+            worldMapCanvases[currentWorldIndex] != null)
+        {
+            worldMapCanvases[currentWorldIndex].SetActive(true);
+        }
+
         SetBackgroundIndex(0);
     }
 
     public void StartEncounter(EncounterData encounterData)
     {
-        mapCanvas.SetActive(false);
+        HideAllWorldMaps();
         battleCanvas.SetActive(true);
 
         bool isBoss = currentNode != null && currentNode.isBoss;
@@ -168,40 +214,119 @@ public class GameManager : MonoBehaviour
     public void EndBattle(bool playerWon)
     {
         playerCurrentHP = turnManager.player.health;
-
         turnManager.ClearBattlefield();
 
+        // --- Başarısızlık: her şeyi sıfırla, World 1'e dön ---
         if (!playerWon)
         {
-            ResetProgress();
-            SceneManager.LoadScene(0);
+            ResetProgress();   // currentWorldIndex = 0 da burada yapılıyor
+            ShowMap();         // World 1 canvas'nı aç
             return;
         }
 
+        // --- Boss yenildi ---
         if (currentNode != null && currentNode.isBoss)
         {
-            ResetProgress();
-            SceneManager.LoadScene(0);
+            AdvanceToNextWorld();
             return;
         }
 
+        // --- Normal savaş kazanıldı ---
         ShowMap();
         CompleteCurrentNode();
     }
 
-    private void SetBackgroundIndex(int index)
+    /// <summary>
+    /// Mevcut world'ün boss'u yenilince çağrılır.
+    /// Son world ise oyun kazanılmış demektir.
+    /// </summary>
+    private void AdvanceToNextWorld()
+    {
+        int totalWorlds = worldMapCanvases != null ? worldMapCanvases.Length : 0;
+
+        if (currentWorldIndex + 1 >= totalWorlds)
+        {
+            // Tüm world'ler tamamlandı → oyun kazanıldı!
+            Debug.Log("Tüm dünyaları tamamladın! Oyun kazanıldı!");
+            // İstersen burada bir "Kazan" ekranı açabilirsin
+            ResetProgress();
+            ShowMap();   // World 1'e dön (ya da ayrı bir win scene)
+            return;
+        }
+
+        // Sonraki world'e geç
+        currentWorldIndex++;
+        currentNode = null;
+        Debug.Log($"World {currentWorldIndex} başlıyor!");
+
+        // Yeni world'ün ilk node'unu aç
+        UnlockFirstNodeOfCurrentWorld();
+        ShowMap();
+    }
+
+    /// <summary>
+    /// Aktif world canvas'ındaki tüm MapNode'ları kilitler,
+    /// sonra ilk node'u (startNode / isBoss == false olan ilkı) açar.
+    /// İnspector'da "World Start Node" referansı vermek istemeyenler için
+    /// basit otomatik çözüm: canvas altındaki MapNode'lardan isUnlocked=true olanları aç.
+    /// </summary>
+    private void UnlockFirstNodeOfCurrentWorld()
+    {
+        if (worldMapCanvases == null ||
+            currentWorldIndex >= worldMapCanvases.Length ||
+            worldMapCanvases[currentWorldIndex] == null) return;
+
+        MapNode[] nodes = worldMapCanvases[currentWorldIndex]
+                            .GetComponentsInChildren<MapNode>(true);
+
+        // Önce hepsini kilitle
+        foreach (MapNode node in nodes)
+        {
+            node.isUnlocked = false;
+            if (node.nodeButton != null) node.nodeButton.interactable = false;
+        }
+
+        // Başlangıç node'u: isBoss değil + başka bir node'un nextNodes'unda OLMAYAN
+        // (basit: sadece ChildOrder=0 ya da "startNode" flag'i — şimdilik
+        //  dışarıdan referans olarak "worldStartNodes" array'i kullanıyoruz)
+        if (worldStartNodes != null &&
+            currentWorldIndex < worldStartNodes.Length &&
+            worldStartNodes[currentWorldIndex] != null)
+        {
+            worldStartNodes[currentWorldIndex].UnlockNode();
+        }
+    }
+
+    /// <summary>
+    /// slot: 0 = harita, 1 = normal savaş, 2 = boss savaşı
+    /// World, currentWorldIndex'ünden otomatik alınır.
+    /// </summary>
+    private void SetBackgroundIndex(int slot)
     {
         if (backgroundRenderer == null) return;
-        if (backgroundSprites == null || backgroundSprites.Length == 0) return;
-        if (index < 0 || index >= backgroundSprites.Length) return;
-        if (backgroundSprites[index] == null) return;
+        if (worldBackgrounds == null || worldBackgrounds.Length == 0) return;
 
-        backgroundRenderer.sprite = backgroundSprites[index];
+        int wi = Mathf.Clamp(currentWorldIndex, 0, worldBackgrounds.Length - 1);
+        WorldBackgroundSet set = worldBackgrounds[wi];
+        if (set == null) return;
+
+        Sprite chosen = slot switch
+        {
+            1 => set.battleBg,
+            2 => set.bossBg,
+            _ => set.mapBg      // 0 veya diğer → harita arkaplanı
+        };
+
+        if (chosen != null)
+            backgroundRenderer.sprite = chosen;
     }
 
     private void ResetProgress()
     {
         Time.timeScale = 1f;
+
+        // World sıfırla
+        currentWorldIndex = 0;
 
         playerGold = 0;
         RefreshGoldText();
@@ -217,23 +342,37 @@ public class GameManager : MonoBehaviour
                 playerCurrentDeck.Add(cardData.ToCard());
             }
         }
+
+        // World 1'in başlangıç node'unu tekrar aç
+        UnlockFirstNodeOfCurrentWorld();
     }
 
     public void CompleteCurrentNode()
     {
-        MapNode[] allNodes = FindObjectsOfType<MapNode>();
-        foreach (MapNode node in allNodes)
+        // Sadece aktif world'deki node'ları kilitle
+        if (worldMapCanvases != null &&
+            currentWorldIndex < worldMapCanvases.Length &&
+            worldMapCanvases[currentWorldIndex] != null)
         {
-            node.isUnlocked = false;
-            node.nodeButton.interactable = false;
+            MapNode[] worldNodes = worldMapCanvases[currentWorldIndex]
+                                       .GetComponentsInChildren<MapNode>(true);
+            foreach (MapNode node in worldNodes)
+            {
+                node.isUnlocked = false;
+                if (node.nodeButton != null) node.nodeButton.interactable = false;
+            }
         }
 
         if (currentNode != null)
         {
             foreach (MapNode next in currentNode.nextNodes)
-            {
                 next.UnlockNode();
-            }
         }
     }
+
+    // --------------- Inspector referansları ---------------
+
+    [Header("World Başlangıç Node'ları")]
+    [Tooltip("Her world'ün ilk açılması gereken MapNode'u — index world'e karşılık gelir")]
+    public MapNode[] worldStartNodes;   // World 1 baş, World 2 baş, World 3 baş
 }
