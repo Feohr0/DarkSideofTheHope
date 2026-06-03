@@ -185,6 +185,7 @@ public class TurnManager : MonoBehaviour
             }
 
             TryPlayCard(chosen);
+            FindObjectOfType<UIManager>()?.Refresh();
 
             if (gameOver) yield break;
 
