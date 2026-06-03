@@ -50,6 +50,18 @@ public class GameManager : MonoBehaviour
     [Header("Harita İlerlemesi")]
     public MapNode currentNode;
 
+    /// <summary>Aktif node'u değiştirir ve halka gösterimini günceller.</summary>
+    public void SetCurrentNode(MapNode newNode)
+    {
+        if (currentNode != null)
+            currentNode.HideRing();
+
+        currentNode = newNode;
+
+        if (currentNode != null)
+            currentNode.ShowRing();
+    }
+
     /// <summary>Şu an hangi world'deyiz (0 = World 1, 1 = World 2, 2 = World 3)</summary>
     [HideInInspector] public int currentWorldIndex = 0;
 
@@ -271,7 +283,7 @@ public class GameManager : MonoBehaviour
 
         // Sonraki world'e geç
         currentWorldIndex++;
-        currentNode = null;
+        SetCurrentNode(null);
         Debug.Log($"World {currentWorldIndex} başlıyor!");
 
         // Yeni world'ün ilk node'unu aç
@@ -347,7 +359,7 @@ public class GameManager : MonoBehaviour
         RefreshGoldText();
 
         playerCurrentHP = playerMaxHP;
-        currentNode = null;
+        SetCurrentNode(null);
 
         playerCurrentDeck.Clear();
         if (playerMainDeck != null && playerMainDeck.cards != null)

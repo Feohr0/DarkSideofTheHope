@@ -1,0 +1,996 @@
+fileFormatVersion: 2
+guid: bc6f588195c4a4882827aa9ef1b947fe
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_0
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1764
+        width: 62
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47ef0f37490e4b9fa1eae3a17af5880
+      internalID: -397768876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_1
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1764
+        width: 62
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8840cff7a9a94141999a08524eebf61
+      internalID: 1701145330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_2
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1764
+        width: 58
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7da5565a95ec48c3ac7d4336694a5d2
+      internalID: -1545829175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_3
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1764
+        width: 54
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb02511d4d9e4881adcc38425503bb2
+      internalID: -1515920816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_4
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 1764
+        width: 55
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7602fa26500e743a5b88ef2714efad2c
+      internalID: 565945398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_5
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1765
+        width: 61
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b5c698fff4b4c4292d9c6361fa0322
+      internalID: 18016906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_6
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 1765
+        width: 61
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010fdc028cbe34bcfb4dd044db9cadc5
+      internalID: 901800166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_7
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 1764
+        width: 76
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3d1c13e72a1438890bcc773a7307a7
+      internalID: -180738182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_8
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 1764
+        width: 58
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dccddedddf14b461790227dc50dab3be
+      internalID: 180360178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_9
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 1765
+        width: 47
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c35e20e271248a3add0873e4e00cbc
+      internalID: 1761651798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_10
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 1764
+        width: 20
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9cafee1217b48ccad4413253da47b1
+      internalID: -605696747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_11
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 1764
+        width: 61
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062ad732d94e54843aa6c6b04ce59ff4
+      internalID: -580489994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_12
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 1765
+        width: 48
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e025d75a44654f62a69b1dfe7378647
+      internalID: 1240282324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_13
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 1764
+        width: 62
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac9f285db26a4482d86d515ae3f282d1
+      internalID: -95573178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_14
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 1764
+        width: 52
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f1a025d6556440f86ef3f956f3e010
+      internalID: -2035031987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_15
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 1765
+        width: 52
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5325df4edf88945f594c1158e0e259e2
+      internalID: 1430545851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_16
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 1697
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb96189d3ddec4c74910b0f96ec2f889
+      internalID: 1812042350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_17
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 1697
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884d5c2ce34194e2c8854e454b65657f
+      internalID: -908013922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_18
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 1698
+        width: 12
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46359219ab4840518e53aeaf6b3f003
+      internalID: -1487276859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_19
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 1698
+        width: 13
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a660bc7ca23f4250aa8de0ec069de20
+      internalID: 704836495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_20
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 1697
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39e0b752a2344a478ee825722ba84b5
+      internalID: 1322601732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_21
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 1697
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5f704b6a1aa4e7bae3a4358a9d8c0d
+      internalID: -1830900015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_22
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 1697
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a937a9f4bddc34926b71211f7f6be986
+      internalID: 1463179024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_23
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 1737
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 781a1df3bff7f49c481b0bf139f75a44
+      internalID: 1328995783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_24
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 1697
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ede1b48bb6547d882b4b2e605fb195
+      internalID: -610545201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_25
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 1698
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb72a87f8ba7c480a9cbec157e082cdc
+      internalID: 1766522998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_26
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 1698
+        width: 13
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d6c52fbc060469c83b44a55c7c412d
+      internalID: -30378520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_27
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1143
+        width: 539
+        height: 469
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be8406c9c75824061bb53685923cfbd3
+      internalID: 891364135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_28
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 1138
+        width: 522
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea06ad27ef67a43258218445650ef99c
+      internalID: 507805183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_29
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1161
+        width: 548
+        height: 454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0962dc032754cd1b14d087e2de94b3
+      internalID: -324742013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_30
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 546
+        width: 561
+        height: 568
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbaf6e6096ad4e4cb52db4a11f2a4d0
+      internalID: 822069939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_31
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 564
+        width: 592
+        height: 525
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122afb68b2c1348ca8047e1388521dbe
+      internalID: 2005686396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_32
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 547
+        width: 561
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5036bc46ab97446f99bec486ad1dc43c
+      internalID: 443753780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_33
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 99
+        width: 367
+        height: 333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9494bef1989ca45758af968c9401d1af
+      internalID: 1812761020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_34
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 95
+        width: 377
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c61b2d6c39ac4d768226c9c49bc47a2
+      internalID: -110446436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_35
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 87
+        width: 412
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5438b707cc548cd800bb66992c58c3
+      internalID: -231037632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand-drawn-circle-scribbles-set-ten-2_36
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 98
+        width: 417
+        height: 334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95cd05e62b55c431db9aef365ff3e9b2
+      internalID: 2145286667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 909d4868bdb934a8fac349d8d01e2957
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      hand-drawn-circle-scribbles-set-ten-2_0: -397768876
+      hand-drawn-circle-scribbles-set-ten-2_1: 1701145330
+      hand-drawn-circle-scribbles-set-ten-2_10: -605696747
+      hand-drawn-circle-scribbles-set-ten-2_11: -580489994
+      hand-drawn-circle-scribbles-set-ten-2_12: 1240282324
+      hand-drawn-circle-scribbles-set-ten-2_13: -95573178
+      hand-drawn-circle-scribbles-set-ten-2_14: -2035031987
+      hand-drawn-circle-scribbles-set-ten-2_15: 1430545851
+      hand-drawn-circle-scribbles-set-ten-2_16: 1812042350
+      hand-drawn-circle-scribbles-set-ten-2_17: -908013922
+      hand-drawn-circle-scribbles-set-ten-2_18: -1487276859
+      hand-drawn-circle-scribbles-set-ten-2_19: 704836495
+      hand-drawn-circle-scribbles-set-ten-2_2: -1545829175
+      hand-drawn-circle-scribbles-set-ten-2_20: 1322601732
+      hand-drawn-circle-scribbles-set-ten-2_21: -1830900015
+      hand-drawn-circle-scribbles-set-ten-2_22: 1463179024
+      hand-drawn-circle-scribbles-set-ten-2_23: 1328995783
+      hand-drawn-circle-scribbles-set-ten-2_24: -610545201
+      hand-drawn-circle-scribbles-set-ten-2_25: 1766522998
+      hand-drawn-circle-scribbles-set-ten-2_26: -30378520
+      hand-drawn-circle-scribbles-set-ten-2_27: 891364135
+      hand-drawn-circle-scribbles-set-ten-2_28: 507805183
+      hand-drawn-circle-scribbles-set-ten-2_29: -324742013
+      hand-drawn-circle-scribbles-set-ten-2_3: -1515920816
+      hand-drawn-circle-scribbles-set-ten-2_30: 822069939
+      hand-drawn-circle-scribbles-set-ten-2_31: 2005686396
+      hand-drawn-circle-scribbles-set-ten-2_32: 443753780
+      hand-drawn-circle-scribbles-set-ten-2_33: 1812761020
+      hand-drawn-circle-scribbles-set-ten-2_34: -110446436
+      hand-drawn-circle-scribbles-set-ten-2_35: -231037632
+      hand-drawn-circle-scribbles-set-ten-2_36: 2145286667
+      hand-drawn-circle-scribbles-set-ten-2_4: 565945398
+      hand-drawn-circle-scribbles-set-ten-2_5: 18016906
+      hand-drawn-circle-scribbles-set-ten-2_6: 901800166
+      hand-drawn-circle-scribbles-set-ten-2_7: -180738182
+      hand-drawn-circle-scribbles-set-ten-2_8: 180360178
+      hand-drawn-circle-scribbles-set-ten-2_9: 1761651798
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

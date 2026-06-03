@@ -628,6 +628,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 459215216}
   isUnlocked: 0
@@ -2364,6 +2366,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 673209304}
   isUnlocked: 0
@@ -3608,6 +3612,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 2142707404}
   - {fileID: 1649244105}
@@ -3654,6 +3660,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 640493880}
   isUnlocked: 0
@@ -5366,6 +5374,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 887235445}
   isUnlocked: 0
@@ -5798,6 +5808,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 887235445}
   isUnlocked: 0
@@ -6216,6 +6228,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes: []
   isUnlocked: 0
   nodeButton: {fileID: 673209305}
@@ -6354,6 +6368,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 459215216}
   - {fileID: 1028654064}
@@ -8173,6 +8189,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes: []
   isUnlocked: 0
   nodeButton: {fileID: 887235446}
@@ -8746,6 +8764,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 1649244105}
   isUnlocked: 0
@@ -9544,6 +9564,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 596311996}
   isUnlocked: 0
@@ -11954,6 +11976,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 684910665}
   - {fileID: 57768851}
@@ -14752,6 +14776,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 229778444}
   isUnlocked: 0
@@ -15322,6 +15348,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 1868317338}
   - {fileID: 684910665}
@@ -16180,6 +16208,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 2142707404}
   isUnlocked: 0
@@ -16460,6 +16490,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 1028654064}
   isUnlocked: 0
@@ -16618,6 +16650,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 456338317}
   - {fileID: 1849520430}
@@ -17082,6 +17116,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 916506380}
   - {fileID: 456338317}
@@ -18150,6 +18186,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 673209304}
   isUnlocked: 0
@@ -18583,6 +18621,8 @@ MonoBehaviour:
   shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
   upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
   randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
+  activeRingObject: {fileID: 0}
+  ringSprite: {fileID: -324742013, guid: bc6f588195c4a4882827aa9ef1b947fe, type: 3}
   nextNodes:
   - {fileID: 2097100035}
   isUnlocked: 0
