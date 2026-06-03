@@ -623,11 +623,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: c7f2e47532b45a647a0d0104b02a1990, type: 2}
   iconImage: {fileID: 57768853}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 459215216}
   isUnlocked: 0
@@ -2359,11 +2359,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: 0617116399b82fb4ea230c501b71ca6a, type: 2}
   iconImage: {fileID: 229778446}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 673209304}
   isUnlocked: 0
@@ -3603,11 +3603,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: 732cd47a7c046cd43a284c5c90bfe859, type: 2}
   iconImage: {fileID: 456338315}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 2142707404}
   - {fileID: 1649244105}
@@ -3649,11 +3649,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: 732cd47a7c046cd43a284c5c90bfe859, type: 2}
   iconImage: {fileID: 459215218}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 640493880}
   isUnlocked: 0
@@ -5182,6 +5182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 592239571}
   - component: {fileID: 592239572}
+  - component: {fileID: 592239573}
   m_Layer: 5
   m_Name: HP BAR Slider
   m_TagString: Untagged
@@ -5262,6 +5263,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &592239573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592239570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b9fc137b6e04fef9290a49249d4079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIShake
+  shakeDuration: 0.35
+  shakeIntensity: 60
+  shakeFrequency: 40
+  decayOverTime: 1
 --- !u!1 &596105705
 GameObject:
   m_ObjectHideFlags: 0
@@ -5344,11 +5361,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: 1a72c2c7d7e594bbc878d6f940e0cbcb, type: 2}
   iconImage: {fileID: 596311998}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 887235445}
   isUnlocked: 0
@@ -5776,11 +5793,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: 1a72c2c7d7e594bbc878d6f940e0cbcb, type: 2}
   iconImage: {fileID: 640493882}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 887235445}
   isUnlocked: 0
@@ -6194,11 +6211,11 @@ MonoBehaviour:
   isBoss: 1
   encounter: {fileID: 11400000, guid: 19eb1eeb95ca82745a201774bb8fed19, type: 2}
   iconImage: {fileID: 673209306}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes: []
   isUnlocked: 0
   nodeButton: {fileID: 673209305}
@@ -6332,11 +6349,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: 04af72bda9c2948c0bcf9a59a899d0c0, type: 2}
   iconImage: {fileID: 684910667}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 459215216}
   - {fileID: 1028654064}
@@ -8151,11 +8168,11 @@ MonoBehaviour:
   isBoss: 1
   encounter: {fileID: 11400000, guid: 922ead1cb1c734ba0ab9ebcc6723f78e, type: 2}
   iconImage: {fileID: 887235447}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes: []
   isUnlocked: 0
   nodeButton: {fileID: 887235446}
@@ -8724,11 +8741,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: 732cd47a7c046cd43a284c5c90bfe859, type: 2}
   iconImage: {fileID: 916506382}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 1649244105}
   isUnlocked: 0
@@ -9522,11 +9539,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: c7f2e47532b45a647a0d0104b02a1990, type: 2}
   iconImage: {fileID: 1028654066}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 596311996}
   isUnlocked: 0
@@ -11932,11 +11949,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: c7f2e47532b45a647a0d0104b02a1990, type: 2}
   iconImage: {fileID: 1273319512}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 684910665}
   - {fileID: 57768851}
@@ -14730,11 +14747,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: c7f2e47532b45a647a0d0104b02a1990, type: 2}
   iconImage: {fileID: 1649244107}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 229778444}
   isUnlocked: 0
@@ -15300,11 +15317,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: 04af72bda9c2948c0bcf9a59a899d0c0, type: 2}
   iconImage: {fileID: 1744376085}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 1868317338}
   - {fileID: 684910665}
@@ -15469,6 +15486,7 @@ MonoBehaviour:
   playerMainDeck: {fileID: 11400000, guid: 8f3d28b23feb0ba4392176219a660c1f, type: 2}
   playerMaxHP: 30
   playerCurrentHP: 30
+  endBattleDelay: 1
   playerGold: 0
   goldText: {fileID: 1305045017}
   playerCurrentDeck: []
@@ -15914,6 +15932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1816478025}
   - component: {fileID: 1816478026}
+  - component: {fileID: 1816478027}
   m_Layer: 5
   m_Name: HP BAR Slider
   m_TagString: Untagged
@@ -15994,6 +16013,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1816478027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816478024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b9fc137b6e04fef9290a49249d4079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIShake
+  shakeDuration: 0.35
+  shakeIntensity: 60
+  shakeFrequency: 40
+  decayOverTime: 1
 --- !u!1 &1846786513
 GameObject:
   m_ObjectHideFlags: 0
@@ -16140,11 +16175,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: c7f2e47532b45a647a0d0104b02a1990, type: 2}
   iconImage: {fileID: 1849520432}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 2142707404}
   isUnlocked: 0
@@ -16420,11 +16455,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: 732cd47a7c046cd43a284c5c90bfe859, type: 2}
   iconImage: {fileID: 1868317340}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 1028654064}
   isUnlocked: 0
@@ -16578,11 +16613,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: c7f2e47532b45a647a0d0104b02a1990, type: 2}
   iconImage: {fileID: 1890860447}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 456338317}
   - {fileID: 1849520430}
@@ -17042,11 +17077,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: b850a8425fda9c84784419908a271bf7, type: 2}
   iconImage: {fileID: 1971688986}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 916506380}
   - {fileID: 456338317}
@@ -17289,6 +17324,7 @@ MonoBehaviour:
   endTurnButton: {fileID: 1335794592}
   logText: {fileID: 1736632661}
   goldText: {fileID: 1305045017}
+  hpBarSmoothTime: 0.4
 --- !u!1 &1990958215
 GameObject:
   m_ObjectHideFlags: 0
@@ -18109,11 +18145,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: 0617116399b82fb4ea230c501b71ca6a, type: 2}
   iconImage: {fileID: 2097100037}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 673209304}
   isUnlocked: 0
@@ -18542,11 +18578,11 @@ MonoBehaviour:
   isBoss: 0
   encounter: {fileID: 11400000, guid: 732cd47a7c046cd43a284c5c90bfe859, type: 2}
   iconImage: {fileID: 2142707406}
-  battleSprite: {fileID: 21300000, guid: 57351bc302c814f30b2b6a0bc6bfc84d, type: 3}
-  bossSprite: {fileID: 21300000, guid: 91e0b5b214bcb4e5d9e365a90afaac35, type: 3}
-  shopSprite: {fileID: 21300000, guid: c730510d74b704a248af73b80bb048e2, type: 3}
-  upgradeSprite: {fileID: 21300000, guid: c0cccbcc167444e12ad43957ce17a82f, type: 3}
-  randomSprite: {fileID: 21300000, guid: 6b07f2a02e928471fa0253c82f70ce2e, type: 3}
+  battleSprite: {fileID: 21300000, guid: 48dfdac0de3fd4a0698b92d8f2645ec6, type: 3}
+  bossSprite: {fileID: 21300000, guid: 09fa5292be39e4ce784cd261d14f72f6, type: 3}
+  shopSprite: {fileID: 21300000, guid: 0a7014603e47946108af5f6292cc998f, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: db9f15ff994da4f0d809687531ef35f4, type: 3}
+  randomSprite: {fileID: 21300000, guid: baead0c26133246e882590474d772f31, type: 3}
   nextNodes:
   - {fileID: 2097100035}
   isUnlocked: 0
