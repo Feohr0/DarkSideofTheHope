@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -35,6 +36,10 @@ public class GameManager : MonoBehaviour
     [Header("Kalıcı Oyuncu Verileri")]
     public int playerMaxHP = 30;
     public int playerCurrentHP;
+
+    [Header("Savaş Sonu")]
+    [Tooltip("Savaş bittikten sonra haritaya dönmeden önceki bekleme süresi (saniye)")]
+    [SerializeField] private float endBattleDelay = 1f;
 
     [Header("Ekonomi")]
     public int playerGold = 0;
@@ -214,10 +219,20 @@ public class GameManager : MonoBehaviour
     public void EndBattle(bool playerWon)
     {
         playerCurrentHP = turnManager.player.health;
+        cachedPlayerWon = playerWon;
+        Debug.Log($"EndBattle çağrıldı → playerWon={playerWon}, {endBattleDelay}s sonra haritaya dönülecek.");
+        Invoke(nameof(ExecuteEndBattle), endBattleDelay);
+    }
+
+    private bool cachedPlayerWon;
+
+    private void ExecuteEndBattle()
+    {
+        Debug.Log($"ExecuteEndBattle → Haritaya dönülüyor. playerWon={cachedPlayerWon}");
         turnManager.ClearBattlefield();
 
         // --- Başarısızlık: her şeyi sıfırla, World 1'e dön ---
-        if (!playerWon)
+        if (!cachedPlayerWon)
         {
             ResetProgress();   // currentWorldIndex = 0 da burada yapılıyor
             ShowMap();         // World 1 canvas'nı aç

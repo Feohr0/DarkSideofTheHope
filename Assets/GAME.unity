@@ -13199,6 +13199,7 @@ MonoBehaviour:
   playerDeckData: {fileID: 11400000, guid: 8f3d28b23feb0ba4392176219a660c1f, type: 2}
   enemyDeckData: {fileID: 11400000, guid: 077038cdbd644c344b65d14e5506ea25, type: 2}
   enemySpawnPoint: {fileID: 1740235812}
+  playerCharacterShake: {fileID: 0}
   enemySprites:
   - {fileID: 1154470906}
   - {fileID: 1912020189}
@@ -17278,9 +17279,11 @@ MonoBehaviour:
   playerHPText: {fileID: 2105735927}
   playerEnergyText: {fileID: 613292545}
   playerShieldText: {fileID: 888452780}
+  playerHPShake: {fileID: 0}
   enemyHPBar: {fileID: 592239572}
   enemyHPText: {fileID: 875852343}
   enemyShieldText: {fileID: 1199560493}
+  enemyHPShake: {fileID: 0}
   enemyActionText: {fileID: 1424281764}
   turnText: {fileID: 261537219}
   endTurnButton: {fileID: 1335794592}

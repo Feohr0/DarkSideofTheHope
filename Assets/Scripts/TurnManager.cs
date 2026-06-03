@@ -26,6 +26,11 @@ public class TurnManager : MonoBehaviour
     public Transform enemySpawnPoint;       // Sahnedeki EnemySpawnPoint'i buraya sürükle
     private GameObject currentEnemyModel;
     private VisualFXtest activeEnemyFlash;
+    private UIShake      activeEnemyShake;
+
+    [Header("Sarsılma Efektleri")]
+    [Tooltip("Oyuncu karakter sprite'ına eklenmiş UIShake bileşeni")]
+    public UIShake playerCharacterShake;
     
     public bool   IsPlayerTurn      => currentActor == player;
     public string CurrentActorName  => currentActor.playerName;
@@ -35,12 +40,18 @@ public class TurnManager : MonoBehaviour
     
     public void InitBattle(DeckData playerDeck, EncounterData encounter, int pMaxHP, int pCurrentHP)
     {
+        // Önceki savaşın event'lerini temizle
         if (enemy != null)
         {
             enemy.Damaged -= OnEnemyDamaged;
         }
+        if (player != null)
+        {
+            player.Damaged -= OnPlayerDamaged;
+        }
 
         activeEnemyFlash = null;
+        activeEnemyShake = null;
         currentEncounter = encounter;
         gameOver = false;
         StopAllCoroutines();
@@ -68,12 +79,20 @@ public class TurnManager : MonoBehaviour
             {
                 activeEnemyFlash = activeEnemySprite.AddComponent<VisualFXtest>();
             }
+
+            // Düşman sprite'ına sarsılma bileşeni ekle (yoksa oluştur)
+            activeEnemyShake = activeEnemySprite.GetComponent<UIShake>();
+            if (activeEnemyShake == null)
+            {
+                activeEnemyShake = activeEnemySprite.AddComponent<UIShake>();
+            }
         }
 
         // Oyuncuyu mevcut canıyla yarat
         player = new Player("Oyuncu", pMaxHP, pCurrentHP, 6);
         enemy  = new Player(encounter.enemyName, encounter.maxHealth, encounter.maxHealth, encounter.maxEnergy);
-        enemy.Damaged += OnEnemyDamaged;
+        enemy.Damaged  += OnEnemyDamaged;
+        player.Damaged += OnPlayerDamaged;
 
         player.deck = playerDeck.BuildShuffledDeck();
         enemy.deck  = encounter.enemyDeck.BuildShuffledDeck();
@@ -90,6 +109,10 @@ public class TurnManager : MonoBehaviour
         {
             enemy.Damaged -= OnEnemyDamaged;
         }
+        if (player != null)
+        {
+            player.Damaged -= OnPlayerDamaged;
+        }
 
         if (currentEnemyModel != null)
         {
@@ -102,6 +125,10 @@ public class TurnManager : MonoBehaviour
         if (enemy != null)
         {
             enemy.Damaged -= OnEnemyDamaged;
+        }
+        if (player != null)
+        {
+            player.Damaged -= OnPlayerDamaged;
         }
     }
 
@@ -265,7 +292,7 @@ public class TurnManager : MonoBehaviour
             ui.hudView.ShowEnemyAction(message);
     }
 
-   
+
     public void EndTurn()
     {
         if (gameOver) return;
@@ -276,7 +303,43 @@ public class TurnManager : MonoBehaviour
 
     private void OnEnemyDamaged(int incomingDamage, int healthLost)
     {
-        if (incomingDamage <= 0 || healthLost <= 0 || activeEnemyFlash == null) return;
-        activeEnemyFlash.TriggerFlash();
+        if (incomingDamage <= 0) return;
+
+        // Düşman sprite flash efekti
+        if (healthLost > 0 && activeEnemyFlash != null)
+            activeEnemyFlash.TriggerFlash();
+
+        // Düşman sprite sarsılma efekti
+        if (healthLost > 0 && activeEnemyShake != null)
+            activeEnemyShake.Shake();
+
+        // Düşman can barı sarsılma efekti
+        UIManager ui = FindObjectOfType<UIManager>();
+        if (ui != null && ui.hudView != null)
+        {
+            float normalized = enemy != null && enemy.maxHealth > 0
+                ? (float)healthLost / enemy.maxHealth
+                : 0.5f;
+            ui.hudView.ShakeEnemyHP(normalized);
+        }
+    }
+
+    private void OnPlayerDamaged(int incomingDamage, int healthLost)
+    {
+        if (incomingDamage <= 0) return;
+
+        // Oyuncu karakter sprite sarsılma efekti
+        if (healthLost > 0 && playerCharacterShake != null)
+            playerCharacterShake.Shake();
+
+        // Oyuncu can barı sarsılma efekti
+        UIManager ui = FindObjectOfType<UIManager>();
+        if (ui != null && ui.hudView != null)
+        {
+            float normalized = player != null && player.maxHealth > 0
+                ? (float)healthLost / player.maxHealth
+                : 0.5f;
+            ui.hudView.ShakePlayerHP(normalized);
+        }
     }
 }
